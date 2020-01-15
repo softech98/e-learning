@@ -219,7 +219,7 @@ class __TwigTemplate_8f9d7c6785edc4eca16ab1544d48104c49727a1d4b532f8759711570632
         echo "</textarea>
                 </div>
             </div>
-            <div class=\"control-group\">
+         <!--    <div class=\"control-group\">
                 <label class=\"control-label\">Email server</label>
                 <div class=\"controls\">
                     <input type=\"text\" name=\"email-server\" class=\"span5\" value=\"";
@@ -265,7 +265,7 @@ class __TwigTemplate_8f9d7c6785edc4eca16ab1544d48104c49727a1d4b532f8759711570632
             echo "            <div class=\"control-group\">
                 <label class=\"control-label\">SMTP password</label>
                 <div class=\"controls\">
-                    <input type=\"text\" name=\"smtp-pass\" class=\"span5\" value=\"";
+                    <input type=\"password\" name=\"smtp-pass\" class=\"span5\" value=\"";
             // line 136
             echo twig_escape_filter($this->env, set_value("smtp-pass", get_pengaturan("smtp-pass", "value")), "html", null, true);
             echo "\">
@@ -290,7 +290,7 @@ class __TwigTemplate_8f9d7c6785edc4eca16ab1544d48104c49727a1d4b532f8759711570632
         echo form_error("smtp-port");
         echo "
                 </div>
-            </div>
+            </div> -->
             <div class=\"control-group\">
                 <label class=\"control-label\">Edit username siswa</label>
                 <div class=\"controls\">

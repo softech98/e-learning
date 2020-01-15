@@ -137,15 +137,15 @@ class __TwigTemplate_eac5bd087f7d7ce830ba114e3d5059d5d345ccf707b1b3ae165ebebcc76
             // line 63
             echo twig_escape_filter($this->env, site_url("siswa/index/0"), "html", null, true);
             echo "\" class=\"btn-box big span3\">
-            <i class=\"icon-group\"></i><b>";
+            <i class=\"icon-retweet\"></i><b>";
             // line 64
             echo twig_escape_filter($this->env, (isset($context["jml_siswa_pending"]) ? $context["jml_siswa_pending"] : null), "html", null, true);
             echo "</b>
-            <p class=\"text-muted\">Pending siswa</p>
+            <p class=\"text-muted\">Registrasi Siswa</p>
         </a>
         <a href=\"";
             // line 67
-            echo twig_escape_filter($this->env, site_url("pengajar/index/0"), "html", null, true);
+            echo twig_escape_filter($this->env, site_url("kelas/index/0"), "html", null, true);
             echo "\" class=\"btn-box big span3\">
             <i class=\"icon-tasks\"></i><b>";
             // line 68
