@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 28 Des 2019 pada 10.47
+-- Waktu pembuatan: 18 Jan 2020 pada 02.44
 -- Versi server: 10.1.38-MariaDB
 -- Versi PHP: 7.3.3
 
@@ -41,7 +41,8 @@ CREATE TABLE `el_field_tambahan` (
 INSERT INTO `el_field_tambahan` (`id`, `nama`, `value`) VALUES
 ('check-urgent-info', 'Check Urgent Info', '{\"info\":\"\",\"last_check\":\"2019-11-24 16:50:03\"}'),
 ('history-mengerjakan-1-1', 'History pengerjaan tugas', '{\"mulai\":\"2019-11-24 16:36:24\",\"uri_string\":\"tugas\\/kerjakan\\/1\",\"valid_route\":[\"\\/tugas\\/kerjakan\",\"\\/tugas\\/finish\",\"\\/tugas\\/submit_essay\",\"\\/tugas\\/submit_upload\"],\"tugas\":{\"id\":\"1\",\"mapel_id\":\"1\",\"pengajar_id\":\"1\",\"type_id\":\"1\",\"judul\":\"berbahasa\",\"durasi\":null,\"info\":\"\",\"aktif\":\"1\",\"tgl_buat\":\"2019-11-24 16:35:20\",\"tampil_siswa\":\"1\"},\"unix_id\":\"c10736a3d032fd4246b2ae1431de267e744356\",\"ip\":\"127.0.0.1\",\"agent_string\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/78.0.3904.108 Safari\\/537.36\",\"file_name\":\"c10736a3d032fd4246b2ae1431de267e744356.pdf\",\"tgl_submit\":\"2019-11-24 16:36:51\"}'),
-('history-mengerjakan-1-3', 'History pengerjaan tugas', '{\"mulai\":\"2019-12-21 22:43:17\",\"uri_string\":\"tugas\\/kerjakan\\/3\",\"valid_route\":[\"\\/tugas\\/kerjakan\",\"\\/tugas\\/finish\",\"\\/tugas\\/submit_essay\",\"\\/tugas\\/submit_upload\"],\"tugas\":{\"id\":\"3\",\"mapel_id\":\"1\",\"pengajar_id\":\"2\",\"type_id\":\"1\",\"judul\":\"Upload Tugas DIsini\",\"durasi\":null,\"info\":\"<p>Dimohon untuk bekerjasama<\\/p>\\r\\n\",\"aktif\":\"1\",\"tgl_buat\":\"2019-11-26 02:00:04\",\"tampil_siswa\":\"1\"},\"unix_id\":\"42b47b9bef100dce99fa88010bc02f6c569767\",\"ip\":\"127.0.0.1\",\"agent_string\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.88 Safari\\/537.36\",\"file_name\":\"42b47b9bef100dce99fa88010bc02f6c569767.pptx\",\"tgl_submit\":\"2019-12-25 22:39:50\"}');
+('history-mengerjakan-1-3', 'History pengerjaan tugas', '{\"mulai\":\"2020-01-17 22:38:50\",\"uri_string\":\"tugas\\/kerjakan\\/3\",\"valid_route\":[\"\\/tugas\\/kerjakan\",\"\\/tugas\\/finish\",\"\\/tugas\\/submit_essay\",\"\\/tugas\\/submit_upload\"],\"tugas\":{\"id\":\"3\",\"mapel_id\":\"1\",\"pengajar_id\":\"2\",\"type_id\":\"1\",\"judul\":\"Upload Tugas DIsini\",\"durasi\":null,\"info\":\"<p>Dimohon untuk bekerjasama<\\/p>\\r\\n\",\"aktif\":\"1\",\"tgl_buat\":\"2019-11-26 02:00:04\",\"tampil_siswa\":\"1\"},\"unix_id\":\"42b47b9bef100dce99fa88010bc02f6c678683\",\"ip\":\"127.0.0.1\",\"agent_string\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.117 Safari\\/537.36\",\"file_name\":\"42b47b9bef100dce99fa88010bc02f6c678683.pdf\",\"tgl_submit\":\"2020-01-17 22:39:19\",\"nilai\":\"70\"}'),
+('history-mengerjakan-1-5', 'History pengerjaan tugas', '{\"mulai\":\"2020-01-17 22:14:55\",\"selesai\":\"2020-01-17 23:14:55\",\"uri_string\":\"tugas\\/kerjakan\\/5\",\"valid_route\":[\"\\/tugas\\/kerjakan\",\"\\/tugas\\/finish\",\"\\/tugas\\/submit_essay\",\"\\/tugas\\/submit_upload\"],\"tugas\":{\"id\":\"5\",\"mapel_id\":\"4\",\"pengajar_id\":\"2\",\"type_id\":\"2\",\"judul\":\"Latihan Essay\",\"durasi\":\"60\",\"info\":\"\",\"aktif\":\"1\",\"tgl_buat\":\"2020-01-17 22:09:13\",\"tampil_siswa\":\"1\"},\"unix_id\":\"d5faa648e67dc07fbe5c80983c5a49d112521\",\"ip\":\"127.0.0.1\",\"agent_string\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.117 Safari\\/537.36\",\"pertanyaan_id\":[\"3\"],\"jawaban\":{\"3\":\"<p>Simbiosis Parasistisme<\\/p>\\r\\n\"},\"tgl_submit\":\"2020-01-17 22:15:39\",\"total_waktu\":\"44 detik\",\"nilai\":{\"3\":\"80\"}}');
 
 -- --------------------------------------------------------
 
@@ -66,7 +67,7 @@ INSERT INTO `el_kelas` (`id`, `nama`, `parent_id`, `urutan`, `aktif`) VALUES
 (7, 'KELAS XI - TKJ 1', 6, 2, 1),
 (8, 'KELAS XI - TKJ 2', 6, 3, 1),
 (9, 'KELAS XI - TKJ 3', 6, 4, 1),
-(10, 'KELAS XI - TKJ 4', 6, 5, 1);
+(10, 'KELAS XI - TKJ 4', 6, 5, 0);
 
 -- --------------------------------------------------------
 
@@ -133,7 +134,8 @@ CREATE TABLE `el_login` (
 INSERT INTO `el_login` (`id`, `username`, `password`, `siswa_id`, `pengajar_id`, `is_admin`, `reset_kode`) VALUES
 (1, 'guru@guru.com', '9310f83135f238b04af729fec041cca8', NULL, 1, 1, NULL),
 (2, 'siswa1@siswa.com', '013f0f67779f3b1686c604db150d12ea', 1, NULL, 0, 'ae93c84feb68dd8c85b59529bfb854ee'),
-(3, 'guru1@guru.com', '9310f83135f238b04af729fec041cca8', NULL, 2, 0, NULL);
+(3, 'guru1@guru.com', '9310f83135f238b04af729fec041cca8', NULL, 2, 0, NULL),
+(4, 'guru2@guru.com', '9310f83135f238b04af729fec041cca8', NULL, 3, 0, NULL);
 
 -- --------------------------------------------------------
 
@@ -224,7 +226,75 @@ INSERT INTO `el_login_log` (`id`, `login_id`, `lasttime`, `agent`, `last_activit
 (68, 3, '2019-12-28 15:50:38', '{\"is_mobile\":0,\"browser\":\"Chrome 79.0.3945.88\",\"platform\":\"Unknown Windows OS\",\"agent_string\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.88 Safari\\/537.36\",\"ip\":\"127.0.0.1\"}', 1577523074),
 (69, 1, '2019-12-28 15:51:26', '{\"is_mobile\":0,\"browser\":\"Chrome 79.0.3945.88\",\"platform\":\"Unknown Windows OS\",\"agent_string\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.88 Safari\\/537.36\",\"ip\":\"127.0.0.1\"}', 1577522980),
 (70, 3, '2019-12-28 15:51:43', '{\"is_mobile\":0,\"browser\":\"Chrome 79.0.3945.88\",\"platform\":\"Unknown Windows OS\",\"agent_string\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.88 Safari\\/537.36\",\"ip\":\"127.0.0.1\"}', 1577523144),
-(71, 1, '2019-12-28 15:54:27', '{\"is_mobile\":0,\"browser\":\"Chrome 79.0.3945.88\",\"platform\":\"Unknown Windows OS\",\"agent_string\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.88 Safari\\/537.36\",\"ip\":\"127.0.0.1\"}', 1577526386);
+(71, 1, '2019-12-28 15:54:27', '{\"is_mobile\":0,\"browser\":\"Chrome 79.0.3945.88\",\"platform\":\"Unknown Windows OS\",\"agent_string\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.88 Safari\\/537.36\",\"ip\":\"127.0.0.1\"}', 1577548987),
+(72, 3, '2019-12-28 19:32:59', '{\"is_mobile\":0,\"browser\":\"Chrome 75.0.3770.142\",\"platform\":\"Unknown Windows OS\",\"agent_string\":\"Mozilla\\/5.0 (Windows NT 10.0; WOW64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/75.0.3770.142 Safari\\/537.36\",\"ip\":\"180.251.247.248\"}', 1577536581),
+(73, 2, '2019-12-28 23:08:38', '{\"is_mobile\":0,\"browser\":\"Chrome 79.0.3945.88\",\"platform\":\"Unknown Windows OS\",\"agent_string\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.88 Safari\\/537.36\",\"ip\":\"127.0.0.1\"}', 1577549221),
+(74, 3, '2019-12-28 23:09:07', '{\"is_mobile\":0,\"browser\":\"Chrome 79.0.3945.88\",\"platform\":\"Unknown Windows OS\",\"agent_string\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.88 Safari\\/537.36\",\"ip\":\"127.0.0.1\"}', 1577549268),
+(75, 2, '2019-12-28 23:09:51', '{\"is_mobile\":0,\"browser\":\"Chrome 79.0.3945.88\",\"platform\":\"Unknown Windows OS\",\"agent_string\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.88 Safari\\/537.36\",\"ip\":\"127.0.0.1\"}', 1577584436),
+(76, 1, '2020-01-02 08:49:05', '{\"is_mobile\":0,\"browser\":\"Chrome 79.0.3945.88\",\"platform\":\"Unknown Windows OS\",\"agent_string\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.88 Safari\\/537.36\",\"ip\":\"127.0.0.1\"}', 1577929803),
+(77, 1, '2020-01-02 09:07:06', '{\"is_mobile\":0,\"browser\":\"Chrome 79.0.3945.88\",\"platform\":\"Unknown Windows OS\",\"agent_string\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.88 Safari\\/537.36\",\"ip\":\"127.0.0.1\"}', 1577931069),
+(78, 3, '2020-01-02 09:13:13', '{\"is_mobile\":0,\"browser\":\"Chrome 79.0.3945.88\",\"platform\":\"Unknown Windows OS\",\"agent_string\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.88 Safari\\/537.36\",\"ip\":\"127.0.0.1\"}', 1577931102),
+(79, 1, '2020-01-04 10:01:32', '{\"is_mobile\":1,\"browser\":\"Chrome 79.0.3945.93\",\"platform\":\"Linux\",\"agent_string\":\"Mozilla\\/5.0 (Linux; Android 9; CPH1823) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.93 Mobile Safari\\/537.36\",\"ip\":\"114.125.244.222\"}', 1578106893),
+(80, 1, '2020-01-04 10:01:48', '{\"is_mobile\":0,\"browser\":\"Chrome 79.0.3945.93\",\"platform\":\"Linux\",\"agent_string\":\"Mozilla\\/5.0 (X11; Linux x86_64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.93 Safari\\/537.36\",\"ip\":\"114.125.244.222\"}', 1578106816),
+(81, 3, '2020-01-04 10:02:23', '{\"is_mobile\":0,\"browser\":\"Chrome 79.0.3945.93\",\"platform\":\"Linux\",\"agent_string\":\"Mozilla\\/5.0 (X11; Linux x86_64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.93 Safari\\/537.36\",\"ip\":\"114.125.244.222\"}', 1578106973),
+(82, 3, '2020-01-04 10:03:08', '{\"is_mobile\":1,\"browser\":\"Chrome 79.0.3945.93\",\"platform\":\"Linux\",\"agent_string\":\"Mozilla\\/5.0 (Linux; Android 9; CPH1823) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.93 Mobile Safari\\/537.36\",\"ip\":\"114.125.244.222\"}', 1578106989),
+(83, 3, '2020-01-04 10:03:26', '{\"is_mobile\":1,\"browser\":\"Chrome 79.0.3945.93\",\"platform\":\"Linux\",\"agent_string\":\"Mozilla\\/5.0 (Linux; Android 9; CPH1823) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.93 Mobile Safari\\/537.36\",\"ip\":\"114.125.244.222\"}', 1578107012),
+(84, 3, '2020-01-04 10:04:04', '{\"is_mobile\":1,\"browser\":\"Chrome 79.0.3945.93\",\"platform\":\"Linux\",\"agent_string\":\"Mozilla\\/5.0 (Linux; Android 9; CPH1823) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.93 Mobile Safari\\/537.36\",\"ip\":\"114.125.244.222\"}', 1578107053),
+(85, 1, '2020-01-12 13:26:18', '{\"is_mobile\":0,\"browser\":\"Chrome 79.0.3945.117\",\"platform\":\"Unknown Windows OS\",\"agent_string\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.117 Safari\\/537.36\",\"ip\":\"10.13.227.190\"}', 1578810820),
+(86, 1, '2020-01-12 19:20:40', '{\"is_mobile\":0,\"browser\":\"Chrome 75.0.3770.142\",\"platform\":\"Unknown Windows OS\",\"agent_string\":\"Mozilla\\/5.0 (Windows NT 10.0; WOW64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/75.0.3770.142 Safari\\/537.36\",\"ip\":\"180.251.247.253\"}', 1578835286),
+(87, 1, '2020-01-14 14:32:00', '{\"is_mobile\":0,\"browser\":\"Chrome 79.0.3945.117\",\"platform\":\"Unknown Windows OS\",\"agent_string\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.117 Safari\\/537.36\",\"ip\":\"127.0.0.1\"}', 1578987645),
+(88, 3, '2020-01-14 14:42:52', '{\"is_mobile\":0,\"browser\":\"Chrome 79.0.3945.117\",\"platform\":\"Unknown Windows OS\",\"agent_string\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.117 Safari\\/537.36\",\"ip\":\"127.0.0.1\"}', 1578989031),
+(89, 1, '2020-01-14 15:10:34', '{\"is_mobile\":0,\"browser\":\"Chrome 79.0.3945.117\",\"platform\":\"Unknown Windows OS\",\"agent_string\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.117 Safari\\/537.36\",\"ip\":\"127.0.0.1\"}', 1578989321),
+(90, 3, '2020-01-14 15:10:46', '{\"is_mobile\":0,\"browser\":\"Chrome 79.0.3945.117\",\"platform\":\"Unknown Windows OS\",\"agent_string\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.117 Safari\\/537.36\",\"ip\":\"127.0.0.1\"}', 1579005138),
+(91, 1, '2020-01-14 21:39:41', '{\"is_mobile\":0,\"browser\":\"Chrome 79.0.3945.117\",\"platform\":\"Unknown Windows OS\",\"agent_string\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.117 Safari\\/537.36\",\"ip\":\"127.0.0.1\"}', 1579013324),
+(92, 3, '2020-01-14 21:50:51', '{\"is_mobile\":0,\"browser\":\"Chrome 79.0.3945.117\",\"platform\":\"Unknown Windows OS\",\"agent_string\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.117 Safari\\/537.36\",\"ip\":\"127.0.0.1\"}', 1579013527),
+(93, 2, '2020-01-14 21:54:11', '{\"is_mobile\":0,\"browser\":\"Chrome 79.0.3945.117\",\"platform\":\"Unknown Windows OS\",\"agent_string\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.117 Safari\\/537.36\",\"ip\":\"127.0.0.1\"}', 1579014101),
+(94, 2, '2020-01-14 22:01:49', '{\"is_mobile\":0,\"browser\":\"Chrome 79.0.3945.117\",\"platform\":\"Unknown Windows OS\",\"agent_string\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.117 Safari\\/537.36\",\"ip\":\"127.0.0.1\"}', 1579014124),
+(95, 2, '2020-01-14 22:02:51', '{\"is_mobile\":0,\"browser\":\"Chrome 79.0.3945.117\",\"platform\":\"Unknown Windows OS\",\"agent_string\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.117 Safari\\/537.36\",\"ip\":\"127.0.0.1\"}', 1579017575),
+(96, 1, '2020-01-14 23:01:38', '{\"is_mobile\":0,\"browser\":\"Chrome 79.0.3945.117\",\"platform\":\"Unknown Windows OS\",\"agent_string\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.117 Safari\\/537.36\",\"ip\":\"127.0.0.1\"}', 1579017627),
+(97, 3, '2020-01-14 23:02:31', '{\"is_mobile\":0,\"browser\":\"Chrome 79.0.3945.117\",\"platform\":\"Unknown Windows OS\",\"agent_string\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.117 Safari\\/537.36\",\"ip\":\"127.0.0.1\"}', 1579017952),
+(98, 1, '2020-01-14 23:08:00', '{\"is_mobile\":0,\"browser\":\"Chrome 79.0.3945.117\",\"platform\":\"Unknown Windows OS\",\"agent_string\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.117 Safari\\/537.36\",\"ip\":\"127.0.0.1\"}', 1579019575),
+(99, 3, '2020-01-14 23:34:59', '{\"is_mobile\":0,\"browser\":\"Chrome 79.0.3945.117\",\"platform\":\"Unknown Windows OS\",\"agent_string\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.117 Safari\\/537.36\",\"ip\":\"127.0.0.1\"}', 1579019891),
+(100, 1, '2020-01-14 23:38:23', '{\"is_mobile\":0,\"browser\":\"Chrome 79.0.3945.117\",\"platform\":\"Unknown Windows OS\",\"agent_string\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.117 Safari\\/537.36\",\"ip\":\"127.0.0.1\"}', 1579020089),
+(101, 1, '2020-01-14 23:41:38', '{\"is_mobile\":0,\"browser\":\"Chrome 79.0.3945.117\",\"platform\":\"Unknown Windows OS\",\"agent_string\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.117 Safari\\/537.36\",\"ip\":\"127.0.0.1\"}', 1579020417),
+(102, 1, '2020-01-14 23:47:08', '{\"is_mobile\":0,\"browser\":\"Chrome 79.0.3945.117\",\"platform\":\"Unknown Windows OS\",\"agent_string\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.117 Safari\\/537.36\",\"ip\":\"127.0.0.1\"}', 1579026581),
+(103, 1, '2020-01-15 01:29:50', '{\"is_mobile\":0,\"browser\":\"Chrome 79.0.3945.117\",\"platform\":\"Unknown Windows OS\",\"agent_string\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.117 Safari\\/537.36\",\"ip\":\"127.0.0.1\"}', 1579026548),
+(104, 3, '2020-01-15 01:31:11', '{\"is_mobile\":0,\"browser\":\"Chrome 79.0.3945.117\",\"platform\":\"Unknown Windows OS\",\"agent_string\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.117 Safari\\/537.36\",\"ip\":\"127.0.0.1\"}', 1579027023),
+(105, 3, '2020-01-15 01:37:22', '{\"is_mobile\":0,\"browser\":\"Chrome 79.0.3945.117\",\"platform\":\"Unknown Windows OS\",\"agent_string\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.117 Safari\\/537.36\",\"ip\":\"127.0.0.1\"}', 1579028958),
+(106, 1, '2020-01-15 02:11:20', '{\"is_mobile\":0,\"browser\":\"Chrome 79.0.3945.117\",\"platform\":\"Unknown Windows OS\",\"agent_string\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.117 Safari\\/537.36\",\"ip\":\"127.0.0.1\"}', 1579028999),
+(107, 1, '2020-01-15 02:12:02', '{\"is_mobile\":0,\"browser\":\"Chrome 79.0.3945.117\",\"platform\":\"Unknown Windows OS\",\"agent_string\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.117 Safari\\/537.36\",\"ip\":\"127.0.0.1\"}', 1579029082),
+(108, 3, '2020-01-15 02:13:26', '{\"is_mobile\":0,\"browser\":\"Chrome 79.0.3945.117\",\"platform\":\"Unknown Windows OS\",\"agent_string\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.117 Safari\\/537.36\",\"ip\":\"127.0.0.1\"}', 1579029227),
+(109, 1, '2020-01-15 02:18:57', '{\"is_mobile\":0,\"browser\":\"Chrome 79.0.3945.117\",\"platform\":\"Unknown Windows OS\",\"agent_string\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.117 Safari\\/537.36\",\"ip\":\"127.0.0.1\"}', 1579029735),
+(110, 1, '2020-01-15 02:24:56', '{\"is_mobile\":0,\"browser\":\"Chrome 79.0.3945.117\",\"platform\":\"Unknown Windows OS\",\"agent_string\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.117 Safari\\/537.36\",\"ip\":\"127.0.0.1\"}', 1579052988),
+(111, 1, '2020-01-15 08:54:15', '{\"is_mobile\":0,\"browser\":\"Chrome 79.0.3945.117\",\"platform\":\"Unknown Windows OS\",\"agent_string\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.117 Safari\\/537.36\",\"ip\":\"127.0.0.1\"}', 1579053639),
+(112, 1, '2020-01-15 09:00:50', '{\"is_mobile\":0,\"browser\":\"Chrome 79.0.3945.117\",\"platform\":\"Unknown Windows OS\",\"agent_string\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.117 Safari\\/537.36\",\"ip\":\"127.0.0.1\"}', 1579053584),
+(113, 3, '2020-01-15 09:01:52', '{\"is_mobile\":0,\"browser\":\"Chrome 79.0.3945.117\",\"platform\":\"Unknown Windows OS\",\"agent_string\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.117 Safari\\/537.36\",\"ip\":\"127.0.0.1\"}', 1579072543),
+(114, 1, '2020-01-15 14:16:01', '{\"is_mobile\":0,\"browser\":\"Chrome 79.0.3945.117\",\"platform\":\"Unknown Windows OS\",\"agent_string\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.117 Safari\\/537.36\",\"ip\":\"127.0.0.1\"}', 1579072448),
+(115, 1, '2020-01-15 14:48:29', '{\"is_mobile\":0,\"browser\":\"Chrome 79.0.3945.117\",\"platform\":\"Unknown Windows OS\",\"agent_string\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.117 Safari\\/537.36\",\"ip\":\"127.0.0.1\"}', 1579074398),
+(116, 1, '2020-01-15 21:07:54', '{\"is_mobile\":0,\"browser\":\"Chrome 79.0.3945.117\",\"platform\":\"Unknown Windows OS\",\"agent_string\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.117 Safari\\/537.36\",\"ip\":\"127.0.0.1\"}', 1579097851),
+(117, 3, '2020-01-15 21:19:40', '{\"is_mobile\":0,\"browser\":\"Chrome 79.0.3945.117\",\"platform\":\"Unknown Windows OS\",\"agent_string\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.117 Safari\\/537.36\",\"ip\":\"127.0.0.1\"}', 1579106852),
+(118, 1, '2020-01-16 00:18:19', '{\"is_mobile\":0,\"browser\":\"Chrome 79.0.3945.117\",\"platform\":\"Unknown Windows OS\",\"agent_string\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.117 Safari\\/537.36\",\"ip\":\"127.0.0.1\"}', 1579111441),
+(119, 1, '2020-01-16 08:20:47', '{\"is_mobile\":0,\"browser\":\"Chrome 79.0.3945.117\",\"platform\":\"Unknown Windows OS\",\"agent_string\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.117 Safari\\/537.36\",\"ip\":\"127.0.0.1\"}', 1579137800),
+(120, 1, '2020-01-16 08:42:04', '{\"is_mobile\":0,\"browser\":\"Chrome 79.0.3945.117\",\"platform\":\"Unknown Windows OS\",\"agent_string\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.117 Safari\\/537.36\",\"ip\":\"127.0.0.1\"}', 1579148287),
+(121, 1, '2020-01-16 11:18:13', '{\"is_mobile\":0,\"browser\":\"Chrome 79.0.3945.117\",\"platform\":\"Unknown Windows OS\",\"agent_string\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.117 Safari\\/537.36\",\"ip\":\"127.0.0.1\"}', 1579150037),
+(122, 3, '2020-01-16 11:49:20', '{\"is_mobile\":0,\"browser\":\"Chrome 79.0.3945.117\",\"platform\":\"Unknown Windows OS\",\"agent_string\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.117 Safari\\/537.36\",\"ip\":\"127.0.0.1\"}', 1579156930),
+(123, 1, '2020-01-16 13:42:14', '{\"is_mobile\":0,\"browser\":\"Chrome 79.0.3945.117\",\"platform\":\"Unknown Windows OS\",\"agent_string\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.117 Safari\\/537.36\",\"ip\":\"127.0.0.1\"}', 1579156816),
+(124, 3, '2020-01-16 13:42:20', '{\"is_mobile\":0,\"browser\":\"Chrome 79.0.3945.117\",\"platform\":\"Unknown Windows OS\",\"agent_string\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.117 Safari\\/537.36\",\"ip\":\"127.0.0.1\"}', 1579160104),
+(125, 1, '2020-01-17 00:58:35', '{\"is_mobile\":0,\"browser\":\"Chrome 79.0.3945.117\",\"platform\":\"Unknown Windows OS\",\"agent_string\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.117 Safari\\/537.36\",\"ip\":\"127.0.0.1\"}', 1579197448),
+(126, 1, '2020-01-17 06:22:30', '{\"is_mobile\":0,\"browser\":\"Chrome 79.0.3945.117\",\"platform\":\"Unknown Windows OS\",\"agent_string\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.117 Safari\\/537.36\",\"ip\":\"127.0.0.1\"}', 1579221038),
+(127, 3, '2020-01-17 07:32:46', '{\"is_mobile\":0,\"browser\":\"Chrome 79.0.3945.117\",\"platform\":\"Unknown Windows OS\",\"agent_string\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.117 Safari\\/537.36\",\"ip\":\"127.0.0.1\"}', 1579273641),
+(128, 1, '2020-01-17 15:00:30', '{\"is_mobile\":1,\"browser\":\"Chrome 79.0.3945.116\",\"platform\":\"Linux\",\"agent_string\":\"Mozilla\\/5.0 (Linux; Android 9; CPH1823) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.116 Mobile Safari\\/537.36\",\"ip\":\"182.1.6.45\"}', 1579248201),
+(129, 1, '2020-01-17 15:46:04', '{\"is_mobile\":1,\"browser\":\"Chrome 79.0.3945.116\",\"platform\":\"Linux\",\"agent_string\":\"Mozilla\\/5.0 (Linux; Android 9; CPH1823) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.116 Mobile Safari\\/537.36\",\"ip\":\"182.1.5.190\"}', 1579250699),
+(130, 1, '2020-01-17 15:47:49', '{\"is_mobile\":1,\"browser\":\"Chrome 79.0.3945.116\",\"platform\":\"Linux\",\"agent_string\":\"Mozilla\\/5.0 (Linux; Android 9; CPH1823) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.116 Mobile Safari\\/537.36\",\"ip\":\"182.1.5.190\"}', 1579250784),
+(131, 2, '2020-01-17 15:49:52', '{\"is_mobile\":1,\"browser\":\"Chrome 79.0.3945.116\",\"platform\":\"Linux\",\"agent_string\":\"Mozilla\\/5.0 (Linux; Android 9; CPH1823) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.116 Mobile Safari\\/537.36\",\"ip\":\"182.1.5.190\"}', 1579253259),
+(132, 3, '2020-01-17 22:07:47', '{\"is_mobile\":0,\"browser\":\"Chrome 79.0.3945.117\",\"platform\":\"Unknown Windows OS\",\"agent_string\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.117 Safari\\/537.36\",\"ip\":\"127.0.0.1\"}', 1579273965),
+(133, 2, '2020-01-17 22:14:48', '{\"is_mobile\":0,\"browser\":\"Chrome 79.0.3945.117\",\"platform\":\"Unknown Windows OS\",\"agent_string\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.117 Safari\\/537.36\",\"ip\":\"127.0.0.1\"}', 1579274028),
+(134, 3, '2020-01-17 22:15:53', '{\"is_mobile\":0,\"browser\":\"Chrome 79.0.3945.117\",\"platform\":\"Unknown Windows OS\",\"agent_string\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.117 Safari\\/537.36\",\"ip\":\"127.0.0.1\"}', 1579275092),
+(135, 2, '2020-01-17 22:33:34', '{\"is_mobile\":0,\"browser\":\"Chrome 79.0.3945.117\",\"platform\":\"Unknown Windows OS\",\"agent_string\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.117 Safari\\/537.36\",\"ip\":\"127.0.0.1\"}', 1579275339),
+(136, 3, '2020-01-17 22:37:48', '{\"is_mobile\":0,\"browser\":\"Chrome 79.0.3945.117\",\"platform\":\"Unknown Windows OS\",\"agent_string\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.117 Safari\\/537.36\",\"ip\":\"127.0.0.1\"}', 1579275365),
+(137, 2, '2020-01-17 22:38:07', '{\"is_mobile\":0,\"browser\":\"Chrome 79.0.3945.117\",\"platform\":\"Unknown Windows OS\",\"agent_string\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.117 Safari\\/537.36\",\"ip\":\"127.0.0.1\"}', 1579275468),
+(138, 3, '2020-01-17 22:39:53', '{\"is_mobile\":0,\"browser\":\"Chrome 79.0.3945.117\",\"platform\":\"Unknown Windows OS\",\"agent_string\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.117 Safari\\/537.36\",\"ip\":\"127.0.0.1\"}', 1579275509),
+(139, 2, '2020-01-17 22:40:32', '{\"is_mobile\":0,\"browser\":\"Chrome 79.0.3945.117\",\"platform\":\"Unknown Windows OS\",\"agent_string\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/79.0.3945.117 Safari\\/537.36\",\"ip\":\"127.0.0.1\"}', 1579275549);
 
 -- --------------------------------------------------------
 
@@ -245,7 +315,7 @@ CREATE TABLE `el_mapel` (
 
 INSERT INTO `el_mapel` (`id`, `nama`, `info`, `aktif`) VALUES
 (1, 'Bahasa Indonesia', NULL, 1),
-(2, 'Bahasa Inggris', NULL, 1),
+(2, 'Bahasa Inggris', '', 1),
 (3, 'Matematika', NULL, 1),
 (4, 'Biologi', NULL, 1),
 (5, 'Penjas', NULL, 1),
@@ -276,7 +346,8 @@ CREATE TABLE `el_mapel_ajar` (
 --
 
 INSERT INTO `el_mapel_ajar` (`id`, `hari_id`, `jam_mulai`, `jam_selesai`, `pengajar_id`, `mapel_kelas_id`, `aktif`) VALUES
-(1, 1, '08:00:00', '09:00:00', 2, 1, 1);
+(1, 1, '08:00:00', '09:00:00', 2, 1, 1),
+(2, 2, '09:00:00', '10:00:00', 2, 15, 1);
 
 -- --------------------------------------------------------
 
@@ -304,12 +375,12 @@ INSERT INTO `el_mapel_kelas` (`id`, `kelas_id`, `mapel_id`, `aktif`) VALUES
 (6, 8, 1, 1),
 (7, 8, 2, 1),
 (8, 8, 3, 1),
-(9, 8, 4, 1),
+(9, 8, 4, 0),
 (10, 8, 5, 1),
 (11, 8, 6, 1),
 (12, 8, 7, 1),
 (13, 8, 8, 1),
-(14, 8, 9, 1),
+(14, 8, 9, 0),
 (15, 8, 10, 1);
 
 -- --------------------------------------------------------
@@ -336,10 +407,10 @@ CREATE TABLE `el_materi` (
 --
 
 INSERT INTO `el_materi` (`id`, `mapel_id`, `pengajar_id`, `siswa_id`, `judul`, `konten`, `file`, `tgl_posting`, `publish`, `views`) VALUES
-(1, 3, 1, NULL, 'Konfigurasi Server', '<p><iframe allowfullscreen=\"\" frameborder=\"0\" height=\"360\" src=\"//www.youtube.com/embed/T6ceI5QpaSI\" width=\"640\"></iframe></p>\r\n', NULL, '2019-11-24 23:45:59', 1, 9),
-(2, 2, 2, NULL, 'Dengarkan', '<div class=\"ckeditor-html5-audio\" style=\"text-align: center;\">\r\n<audio __idm_id__=\"726475777\" controls=\"controls\" src=\"http://localhost:8180/new_elearning/userfiles/uploads/3/Alan_Walker%2C_K-391_%26_Emelie_Hollow_-_Lily_(Lyrics).mp3?time=1574708644589\">&nbsp;</audio>\r\n</div>\r\n\r\n<p>&nbsp;</p>\r\n', NULL, '2019-11-26 02:09:11', 0, 4),
+(1, 3, 1, NULL, 'Konfigurasi Server', '<p><iframe allowfullscreen=\"\" frameborder=\"0\" height=\"360\" src=\"//www.youtube.com/embed/T6ceI5QpaSI\" width=\"640\"></iframe></p>\r\n', NULL, '2019-11-24 23:45:59', 1, 11),
+(2, 2, 2, NULL, 'Dengarkan', '<div class=\"ckeditor-html5-audio\" style=\"text-align: center;\">\r\n<audio __idm_id__=\"726475777\" controls=\"controls\" src=\"http://localhost:8180/new_elearning/userfiles/uploads/3/Alan_Walker%2C_K-391_%26_Emelie_Hollow_-_Lily_(Lyrics).mp3?time=1574708644589\">&nbsp;</audio>\r\n</div>\r\n\r\n<p>&nbsp;</p>\r\n', NULL, '2019-11-26 02:09:11', 0, 5),
 (3, 9, 2, NULL, 'Database', NULL, 'database_1576703041.docx', '2019-12-19 04:04:01', 1, 4),
-(4, 10, 2, NULL, 'MEMBACA', NULL, 'membaca_1577288361.pdf', '2019-12-25 22:39:21', 1, 3);
+(4, 10, 2, NULL, 'MEMBACA', NULL, 'membaca_1577288361.pdf', '2019-12-25 22:39:21', 1, 4);
 
 -- --------------------------------------------------------
 
@@ -387,7 +458,8 @@ INSERT INTO `el_messages` (`id`, `type_id`, `content`, `owner_id`, `sender_recei
 (1, 2, '<p>Assalamu&#39;alaikum pak, Maaf mengganggu.&nbsp;</p>\r\n', 2, 1, '2019-11-24 16:20:19', 1),
 (2, 1, '<p>Assalamu&#39;alaikum pak, Maaf mengganggu.&nbsp;</p>\r\n', 1, 2, '2019-11-24 16:20:19', 1),
 (3, 2, '<p>iya ada apa ya?</p>\r\n\r\n<p>&nbsp;</p>\r\n', 1, 2, '2019-11-24 16:21:13', 1),
-(4, 1, '<p>iya ada apa ya?</p>\r\n\r\n<p>&nbsp;</p>\r\n', 2, 1, '2019-11-24 16:21:13', 1);
+(4, 1, '<p>iya ada apa ya?</p>\r\n\r\n<p>&nbsp;</p>\r\n', 2, 1, '2019-11-24 16:21:13', 1),
+(6, 1, '<p>kak?</p>\r\n', 1, 3, '2020-01-15 02:11:10', 1);
 
 -- --------------------------------------------------------
 
@@ -401,6 +473,14 @@ CREATE TABLE `el_nilai_tugas` (
   `tugas_id` int(11) NOT NULL,
   `siswa_id` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data untuk tabel `el_nilai_tugas`
+--
+
+INSERT INTO `el_nilai_tugas` (`id`, `nilai`, `tugas_id`, `siswa_id`) VALUES
+(3, 80, 5, 1),
+(4, 70, 3, 1);
 
 -- --------------------------------------------------------
 
@@ -425,8 +505,9 @@ CREATE TABLE `el_pengajar` (
 --
 
 INSERT INTO `el_pengajar` (`id`, `nip`, `nama`, `jenis_kelamin`, `tempat_lahir`, `tgl_lahir`, `alamat`, `foto`, `status_id`) VALUES
-(1, '', 'Ilham Saputra', 'Laki-laki', 'Jambi', '1990-01-01', 'Jambi', NULL, 1),
-(2, '157151513156', 'Guru Pertama', 'Laki-laki', '', NULL, '', NULL, 1);
+(1, '', 'Administrator', 'Laki-laki', 'Jambi', '1990-01-01', 'Jambi', NULL, 1),
+(2, '157151513156', 'Guru Pertama', 'Laki-laki', '', NULL, '', NULL, 1),
+(3, '1571021939121', 'Guru Kedua', 'Laki-laki', 'Jambi', '1973-08-20', 'Jambi', NULL, 2);
 
 -- --------------------------------------------------------
 
@@ -456,7 +537,7 @@ INSERT INTO `el_pengaturan` (`id`, `nama`, `value`) VALUES
 ('registrasi-pengajar', 'Registrasi Pengajar', '1'),
 ('registrasi-siswa', 'Registrasi Siswa', '1'),
 ('versi', 'Versi', '2.0'),
-('jenjang', 'jenjang', 'SMA'),
+('jenjang', 'jenjang', 'SMK'),
 ('nama-sekolah', 'nama-sekolah', 'SMK Negeri 1 Jambi'),
 ('alamat', 'alamat', 'Jl. Jend. A. Thalib, Simpang IV Sipin, Kec. Telanaipura Kota Jambi'),
 ('telp', 'telp', ''),
@@ -522,7 +603,11 @@ CREATE TABLE `el_pilihan` (
 --
 
 INSERT INTO `el_pilihan` (`id`, `pertanyaan_id`, `konten`, `kunci`, `urutan`, `aktif`) VALUES
-(1, 1, '<p>Semua benar</p>\r\n', 1, 4, 1);
+(1, 1, '<p>Semua benar</p>\r\n', 1, 4, 1),
+(2, 2, '<p>Bernafas</p>\r\n', 1, 1, 1),
+(3, 2, '<p>Berlari</p>\r\n', 0, 2, 1),
+(4, 2, '<p>Berenang</p>\r\n', 0, 3, 1),
+(5, 2, '<p>Bersepeda</p>\r\n', 0, 4, 1);
 
 -- --------------------------------------------------------
 
@@ -577,7 +662,9 @@ CREATE TABLE `el_tugas` (
 INSERT INTO `el_tugas` (`id`, `mapel_id`, `pengajar_id`, `type_id`, `judul`, `durasi`, `info`, `aktif`, `tgl_buat`, `tampil_siswa`) VALUES
 (1, 1, 1, 1, 'berbahasa', NULL, '', 1, '2019-11-24 16:35:20', 1),
 (2, 5, 1, 3, 'Konfigurasi', 60, '', 0, '2019-11-24 16:38:19', 1),
-(3, 1, 2, 1, 'Upload Tugas DIsini', NULL, '<p>Dimohon untuk bekerjasama</p>\r\n', 1, '2019-11-26 02:00:04', 1);
+(3, 1, 2, 1, 'Upload Tugas DIsini', NULL, '<p>Dimohon untuk bekerjasama</p>\r\n', 1, '2019-11-26 02:00:04', 1),
+(4, 1, 2, 3, 'Memahami', 30, '<p>Kerjakan dengan Baik dan Benar. Jangan Mencontek</p>\r\n', 1, '2020-01-14 14:44:11', 1),
+(5, 4, 2, 2, 'Latihan Essay', 60, '', 1, '2020-01-17 22:09:13', 1);
 
 -- --------------------------------------------------------
 
@@ -598,7 +685,10 @@ CREATE TABLE `el_tugas_kelas` (
 INSERT INTO `el_tugas_kelas` (`id`, `tugas_id`, `kelas_id`) VALUES
 (1, 1, 7),
 (2, 2, 7),
-(3, 3, 7);
+(3, 3, 7),
+(4, 4, 7),
+(5, 4, 8),
+(6, 5, 7);
 
 -- --------------------------------------------------------
 
@@ -619,7 +709,9 @@ CREATE TABLE `el_tugas_pertanyaan` (
 --
 
 INSERT INTO `el_tugas_pertanyaan` (`id`, `pertanyaan`, `urutan`, `tugas_id`, `aktif`) VALUES
-(1, '<p>apa nama itu?</p>\r\n', 1, 2, 1);
+(1, '<p>apa nama itu?</p>\r\n', 1, 2, 1),
+(2, '<p>Sebutkan cara membaca?</p>\r\n', 1, 4, 1),
+(3, '<p>Apa nama simbiosis?</p>\r\n', 1, 5, 1);
 
 --
 -- Indexes for dumped tables
@@ -814,13 +906,13 @@ ALTER TABLE `el_komentar`
 -- AUTO_INCREMENT untuk tabel `el_login`
 --
 ALTER TABLE `el_login`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT untuk tabel `el_login_log`
 --
 ALTER TABLE `el_login_log`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=72;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=140;
 
 --
 -- AUTO_INCREMENT untuk tabel `el_mapel`
@@ -832,7 +924,7 @@ ALTER TABLE `el_mapel`
 -- AUTO_INCREMENT untuk tabel `el_mapel_ajar`
 --
 ALTER TABLE `el_mapel_ajar`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT untuk tabel `el_mapel_kelas`
@@ -856,19 +948,19 @@ ALTER TABLE `el_materi_kelas`
 -- AUTO_INCREMENT untuk tabel `el_messages`
 --
 ALTER TABLE `el_messages`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT untuk tabel `el_nilai_tugas`
 --
 ALTER TABLE `el_nilai_tugas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT untuk tabel `el_pengajar`
 --
 ALTER TABLE `el_pengajar`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT untuk tabel `el_pengumuman`
@@ -880,7 +972,7 @@ ALTER TABLE `el_pengumuman`
 -- AUTO_INCREMENT untuk tabel `el_pilihan`
 --
 ALTER TABLE `el_pilihan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT untuk tabel `el_siswa`
@@ -892,19 +984,19 @@ ALTER TABLE `el_siswa`
 -- AUTO_INCREMENT untuk tabel `el_tugas`
 --
 ALTER TABLE `el_tugas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT untuk tabel `el_tugas_kelas`
 --
 ALTER TABLE `el_tugas_kelas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT untuk tabel `el_tugas_pertanyaan`
 --
 ALTER TABLE `el_tugas_pertanyaan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
