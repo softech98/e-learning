@@ -108,9 +108,9 @@ class __TwigTemplate_eee55d9c69784dce413c51105b6b30d1f2c87fc9144a5f00a6520f77def
             // line 37
             if (is_admin()) {
                 // line 38
-                echo "                    ";
+                echo "                   <!--  ";
                 echo anchor(("login/login_log/" . $this->getAttribute((isset($context["pengajar_login"]) ? $context["pengajar_login"] : null), "id")), "Login log", array("class" => "btn btn-small btn-default", "title" => "Login log"));
-                echo "
+                echo " -->
                     ";
             }
             // line 40

@@ -48,7 +48,7 @@
                                     {% if is_siswa() %}
                                     <li>{{ anchor('login/pp', 'Profile')|raw }}</li>
                                     {% endif %}
-                                    <li><a href="{{ site_url('login/login_log/' ~ get_sess_data('login', 'id')) }}">Login log</a></li>
+                                     <!-- <li><a href="{{ site_url('login/login_log/' ~ get_sess_data('login', 'id')) }}">Login log</a></li> -->
                                     <li class="divider"></li>
                                     <li><a href="{{ site_url('login/logout') }}">Logout</a></li>
                                 </ul>

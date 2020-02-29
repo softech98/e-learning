@@ -78,7 +78,7 @@ class Welcome extends MY_Controller
         }
 
         # ambil pengumuman yang sudah tampil
-        $data['pengumuman'] = $this->pengumuman_model->retrieve_all(10, 1, $where_pengumuman, false);
+        // $data['pengumuman'] = $this->pengumuman_model->retrieve_all(10, 1, $where_pengumuman, false);
 
         $this->twig->display('welcome.html', $data);
     }
@@ -454,8 +454,8 @@ class Welcome extends MY_Controller
                         $this->db->delete('nilai_tugas');
 
                         # hapus login log
-                        $this->db->where('login_id', $db_login['id']);
-                        $this->db->delete('login_log');
+                        // $this->db->where('login_id', $db_login['id']);
+                        // $this->db->delete('login_log');
 
                         # hapus login
                         $this->db->where('siswa_id', $siswa_id);

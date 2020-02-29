@@ -155,7 +155,7 @@ class __TwigTemplate_eac5bd087f7d7ce830ba114e3d5059d5d345ccf707b1b3ae165ebebcc76
         </a>
     </div>
 
-    <div class=\"btn-box-row row-fluid\">
+    <!-- <div class=\"btn-box-row row-fluid\">
         <div class=\"span6\">
             <div class=\"well well-small well-box\">
                 <b><i class=\"icon-bullhorn\"></i> Pengumuman</b>
@@ -187,7 +187,7 @@ class __TwigTemplate_eac5bd087f7d7ce830ba114e3d5059d5d345ccf707b1b3ae165ebebcc76
                 <div id=\"show-last-login-list\"></div>
             </div>
         </div>
-    </div>
+    </div> -->
         <!-- <div class=\"span6\">
             <div class=\"well well-small well-box\">
                 <div class=\"pull-right\">
@@ -239,7 +239,7 @@ class __TwigTemplate_eac5bd087f7d7ce830ba114e3d5059d5d345ccf707b1b3ae165ebebcc76
             // line 119
             echo "
     <div class=\"btn-box-row row-fluid\">
-        <div class=\"span6\">
+       <!--  <div class=\"span6\">
             <div class=\"well well-small well-box\">
                 <b><i class=\"icon-bullhorn\"></i> Pengumuman</b>
                 <table class=\"table table-striped table-condensed\">
@@ -263,8 +263,8 @@ class __TwigTemplate_eac5bd087f7d7ce830ba114e3d5059d5d345ccf707b1b3ae165ebebcc76
             // line 130
             echo "                </table>
             </div>
-        </div>
-        <div class=\"span6\">
+        </div> -->
+        <div class=\"span6\"> 
             <!-- <div class=\"well well-small well-box\">
                 <b><i class=\"icon-signin\"></i> Riwayat login pengguna</b>
                 <div id=\"show-last-login-list\"></div>
@@ -330,7 +330,7 @@ class __TwigTemplate_eac5bd087f7d7ce830ba114e3d5059d5d345ccf707b1b3ae165ebebcc76
             echo "                </table>
             </div>
 
-            <div class=\"well well-small well-box\">
+          <!--   <div class=\"well well-small well-box\">
                 <b><i class=\"icon-book\"></i> Materi terbaru</b>
                 <table class=\"table table-striped table-condensed\">
                     ";
@@ -356,22 +356,49 @@ class __TwigTemplate_eac5bd087f7d7ce830ba114e3d5059d5d345ccf707b1b3ae165ebebcc76
             $context = array_intersect_key($context, $_parent) + $_parent;
             // line 180
             echo "                </table>
-            </div>
+            </div> -->
         </div>
 
         <div class=\"span6\">
             <div class=\"well well-small well-box\">
-                <b><i class=\"icon-bullhorn\"></i> Pengumuman</b>
+                <b><i class=\"icon-book\"></i> Materi terbaru</b>
                 <table class=\"table table-striped table-condensed\">
                     ";
             // line 188
             $context['_parent'] = (array) $context;
-            $context['_seq'] = twig_ensure_traversable((isset($context["pengumuman"]) ? $context["pengumuman"] : null));
-            foreach ($context['_seq'] as $context["_key"] => $context["p"]) {
+            $context['_seq'] = twig_ensure_traversable((isset($context["materi_terbaru"]) ? $context["materi_terbaru"] : null));
+            foreach ($context['_seq'] as $context["_key"] => $context["m"]) {
                 // line 189
                 echo "                    <tr>
+                        <td>
+                            <a href=\"";
+                // line 191
+                echo twig_escape_filter($this->env, site_url(("materi/detail/" . $this->getAttribute((isset($context["m"]) ? $context["m"] : null), "id"))), "html", null, true);
+                echo "\" target=\"_tab\">";
+                echo twig_escape_filter($this->env, $this->getAttribute((isset($context["m"]) ? $context["m"] : null), "judul"), "html", null, true);
+                echo "</a>
+                        </td>
+                    </tr>
+                    ";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['m'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 195
+            echo "                </table>
+            </div>
+          <!--   <div class=\"well well-small well-box\">
+                <b><i class=\"icon-bullhorn\"></i> Pengumuman</b>
+                <table class=\"table table-striped table-condensed\">
+                    ";
+            // line 200
+            $context['_parent'] = (array) $context;
+            $context['_seq'] = twig_ensure_traversable((isset($context["pengumuman"]) ? $context["pengumuman"] : null));
+            foreach ($context['_seq'] as $context["_key"] => $context["p"]) {
+                // line 201
+                echo "                    <tr>
                         <td>";
-                // line 190
+                // line 202
                 echo anchor(("pengumuman/detail/" . $this->getAttribute((isset($context["p"]) ? $context["p"] : null), "id")), $this->getAttribute((isset($context["p"]) ? $context["p"] : null), "judul"));
                 echo "</td>
                     </tr>
@@ -380,9 +407,9 @@ class __TwigTemplate_eac5bd087f7d7ce830ba114e3d5059d5d345ccf707b1b3ae165ebebcc76
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['p'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 193
+            // line 205
             echo "                </table>
-            </div>
+            </div> -->
 
             <!-- <div class=\"well well-small well-box\">
                 <b><i class=\"icon-signin\"></i> Riwayat login pengguna</b>
@@ -392,7 +419,7 @@ class __TwigTemplate_eac5bd087f7d7ce830ba114e3d5059d5d345ccf707b1b3ae165ebebcc76
     </div>
     ";
         }
-        // line 203
+        // line 215
         echo "
 </div>
 <!--/#btn-controls-->
@@ -411,6 +438,6 @@ class __TwigTemplate_eac5bd087f7d7ce830ba114e3d5059d5d345ccf707b1b3ae165ebebcc76
 
     public function getDebugInfo()
     {
-        return array (  396 => 203,  384 => 193,  375 => 190,  372 => 189,  368 => 188,  358 => 180,  346 => 176,  342 => 174,  338 => 173,  330 => 167,  318 => 163,  314 => 161,  310 => 160,  302 => 154,  294 => 149,  288 => 145,  285 => 144,  282 => 143,  280 => 142,  277 => 141,  264 => 130,  255 => 127,  252 => 126,  248 => 125,  240 => 119,  232 => 114,  226 => 110,  223 => 109,  220 => 108,  218 => 107,  215 => 106,  207 => 101,  200 => 97,  196 => 96,  181 => 83,  172 => 80,  169 => 79,  165 => 78,  152 => 68,  148 => 67,  142 => 64,  138 => 63,  132 => 60,  128 => 59,  122 => 56,  118 => 55,  114 => 53,  102 => 44,  91 => 36,  80 => 28,  73 => 23,  70 => 22,  68 => 21,  62 => 17,  56 => 15,  54 => 14,  50 => 13,  45 => 11,  39 => 10,  31 => 4,  28 => 3,);
+        return array (  423 => 215,  411 => 205,  402 => 202,  399 => 201,  395 => 200,  388 => 195,  376 => 191,  372 => 189,  368 => 188,  358 => 180,  346 => 176,  342 => 174,  338 => 173,  330 => 167,  318 => 163,  314 => 161,  310 => 160,  302 => 154,  294 => 149,  288 => 145,  285 => 144,  282 => 143,  280 => 142,  277 => 141,  264 => 130,  255 => 127,  252 => 126,  248 => 125,  240 => 119,  232 => 114,  226 => 110,  223 => 109,  220 => 108,  218 => 107,  215 => 106,  207 => 101,  200 => 97,  196 => 96,  181 => 83,  172 => 80,  169 => 79,  165 => 78,  152 => 68,  148 => 67,  142 => 64,  138 => 63,  132 => 60,  128 => 59,  122 => 56,  118 => 55,  114 => 53,  102 => 44,  91 => 36,  80 => 28,  73 => 23,  70 => 22,  68 => 21,  62 => 17,  56 => 15,  54 => 14,  50 => 13,  45 => 11,  39 => 10,  31 => 4,  28 => 3,);
     }
 }

@@ -3,9 +3,6 @@
 /**
  * Class Model untuk Config
  *
- * @package Elearning Dokumenary
- * @link    http://www.dokumenary.net
- * @author  Almazari <almazary@gmail.com>
  */
 class Config_model extends CI_Model
 {
@@ -36,8 +33,8 @@ class Config_model extends CI_Model
             "field_tambahan",
             "messages",
             "komentar",
-            "login_log",
-            "pengumuman",
+            // "login_log",
+            // "pengumuman",
         );
 
         if ($table == "all") {
@@ -58,8 +55,8 @@ class Config_model extends CI_Model
      */
     public function update_index_default_table()
     {
-        $this->db->query("ALTER TABLE `{$this->db->dbprefix}pengumuman` ADD INDEX(`pengajar_id`);");
-        $this->db->query("ALTER TABLE `{$this->db->dbprefix}login_log` ADD INDEX(`login_id`);");
+     //   $this->db->query("ALTER TABLE `{$this->db->dbprefix}pengumuman` ADD INDEX(`pengajar_id`);");
+        // $this->db->query("ALTER TABLE `{$this->db->dbprefix}login_log` ADD INDEX(`login_id`);");
         $this->db->query("ALTER TABLE `{$this->db->dbprefix}komentar` ADD INDEX(`login_id`, `materi_id`);");
         $this->db->query("ALTER TABLE `{$this->db->dbprefix}messages` ADD INDEX(`type_id`, `owner_id`, `sender_receiver_id`);");
         $this->db->query("ALTER TABLE `{$this->db->dbprefix}kelas` ADD INDEX(`parent_id`);");

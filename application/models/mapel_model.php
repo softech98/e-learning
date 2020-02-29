@@ -3,8 +3,7 @@
 /**
  * Class Model untuk resource mapel
  *
- * @package Elearning Dokumenary
- * @link    http://www.dokumenary.net
+
  */
 class Mapel_model extends CI_Model
 {

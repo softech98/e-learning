@@ -3,8 +3,7 @@
 /**
  * Class Model untuk resource Login
  *
- * @package Elearning Dokumenary
- * @link    http://www.dokumenary.net
+
  */
 class Login_model extends CI_Model
 {
@@ -16,12 +15,12 @@ class Login_model extends CI_Model
      * @since  1.8
     
      */
-    public function retrieve_new_log($limit = 10)
-    {
-        $this->db->order_by('lasttime', 'desc');
-        $results = $this->db->get('login_log', $limit);
-        return $results->result_array();
-    }
+    // public function retrieve_new_log($limit = 10)
+    // {
+    //     $this->db->order_by('lasttime', 'desc');
+    //     $results = $this->db->get('login_log', $limit);
+    //     return $results->result_array();
+    // }
 
     /**
      * Method untuk mendapatkan semua data login log
@@ -32,24 +31,24 @@ class Login_model extends CI_Model
      * @return array
     
      */
-    public function retrieve_all_log(
-        $no_of_records = 10,
-        $page_no       = 1,
-        $login_id      = ""
-    ) {
-        $no_of_records = (int)$no_of_records;
-        $page_no       = (int)$page_no;
+    // public function retrieve_all_log(
+    //     $no_of_records = 10,
+    //     $page_no       = 1,
+    //     $login_id      = ""
+    // ) {
+    //     $no_of_records = (int)$no_of_records;
+    //     $page_no       = (int)$page_no;
 
-        $where = array();
-        if (!is_null($login_id)) {
-            $where['login_id'] = array($login_id, 'where');
-        }
+    //     $where = array();
+    //     if (!is_null($login_id)) {
+    //         $where['login_id'] = array($login_id, 'where');
+    //     }
 
-        $orderby = array('id' => 'DESC');
-        $data = $this->pager->set('login_log', $no_of_records, $page_no, $where, $orderby);
+    //     $orderby = array('id' => 'DESC');
+    //     $data = $this->pager->set('login_log', $no_of_records, $page_no, $where, $orderby);
 
-        return $data;
-    }
+    //     return $data;
+    // }
 
     /**
      * Method untuk mendapatkan waktu aktifitas terahir
@@ -58,11 +57,11 @@ class Login_model extends CI_Model
      * @return integer
     
      */
-    public function retrieve_last_activity($log_id)
-    {
-        $log = $this->retrieve_log($log_id);
-        return $log['last_activity'];
-    }
+    // public function retrieve_last_activity($log_id)
+    // {
+    //     $log = $this->retrieve_log($log_id);
+    //     return $log['last_activity'];
+    // }
 
     /**
      * Method untuk update last_activity
@@ -71,14 +70,14 @@ class Login_model extends CI_Model
      * @return array
     
      */
-    public function update_last_activity($log_id, $time = "")
-    {
-        $this->db->where('id', $log_id);
-        $this->db->update('login_log', array(
-            'last_activity' => empty($time) ? time() : $time,
-        ));
-        return true;
-    }
+    // public function update_last_activity($log_id, $time = "")
+    // {
+    //     $this->db->where('id', $log_id);
+    //     $this->db->update('login_log', array(
+    //         'last_activity' => empty($time) ? time() : $time,
+    //     ));
+    //     return true;
+    // }
 
     /**
      * Method untuk mendapatkan login log terahir berdasarkan login_id
@@ -86,13 +85,13 @@ class Login_model extends CI_Model
      * @return array
     
      */
-    public function retrieve_last_log($login_id)
-    {
-        $this->db->where('login_id', $login_id);
-        $this->db->order_by('id', 'desc');
-        $result = $this->db->get('login_log', 1);
-        return $result->row_array();
-    }
+    // public function retrieve_last_log($login_id)
+    // {
+    //     $this->db->where('login_id', $login_id);
+    //     $this->db->order_by('id', 'desc');
+    //     $result = $this->db->get('login_log', 1);
+    //     return $result->row_array();
+    // }
 
     /**
      * Method untuk mendapatkan satu data log berdasarkan id
@@ -100,12 +99,12 @@ class Login_model extends CI_Model
      * @return array
     
      */
-    public function retrieve_log($id)
-    {
-        $this->db->where('id', $id);
-        $result = $this->db->get('login_log');
-        return $result->row_array();
-    }
+    // public function retrieve_log($id)
+    // {
+    //     $this->db->where('id', $id);
+    //     $result = $this->db->get('login_log');
+    //     return $result->row_array();
+    // }
 
     /**
      * Method untuk menambahkan riwayat log
@@ -113,22 +112,22 @@ class Login_model extends CI_Model
      * @return integer insert id
     
      */
-    public function create_log($login_id)
-    {
-        $this->db->insert('login_log', array(
-            'login_id' => $login_id,
-            'lasttime' => date('Y-m-d H:i:s'),
-            'agent'    => json_encode(array(
-                'is_mobile'    => ($this->agent->is_mobile()) ? 1 : 0,
-                'browser'      => ($this->agent->is_browser()) ? $this->agent->browser() . ' ' . $this->agent->version() : '',
-                'platform'     => $this->agent->platform(),
-                'agent_string' => $this->agent->agent_string(),
-                'ip'           => get_ip(),
-            ))
-        ));
+    // public function create_log($login_id)
+    // {
+    //     $this->db->insert('login_log', array(
+    //         'login_id' => $login_id,
+    //         'lasttime' => date('Y-m-d H:i:s'),
+    //         'agent'    => json_encode(array(
+    //             'is_mobile'    => ($this->agent->is_mobile()) ? 1 : 0,
+    //             'browser'      => ($this->agent->is_browser()) ? $this->agent->browser() . ' ' . $this->agent->version() : '',
+    //             'platform'     => $this->agent->platform(),
+    //             'agent_string' => $this->agent->agent_string(),
+    //             'ip'           => get_ip(),
+    //         ))
+    //     ));
 
-        return $this->db->insert_id();
-    }
+    //     return $this->db->insert_id();
+    // }
 
     /**
      * Method untuk mendapatkan semua data user
@@ -373,13 +372,13 @@ class Login_model extends CI_Model
      * @return boolean
      * @since  1.8
      */
-    public function alter_table()
-    {
-        $CI =& get_instance();
-        $CI->load->model('config_model');
+    // public function alter_table()
+    // {
+    //     $CI =& get_instance();
+    //     $CI->load->model('config_model');
 
-        $CI->config_model->create_tb_login_log();
+    //     $CI->config_model->create_tb_login_log();
 
-        return true;
-    }
+    //     return true;
+    // }
 }

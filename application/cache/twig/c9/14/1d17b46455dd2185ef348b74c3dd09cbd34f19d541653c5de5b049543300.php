@@ -126,9 +126,9 @@ class __TwigTemplate_c9141d17b46455dd2185ef348b74c3dd09cbd34f19d541653c5de5b0495
                                     ";
         }
         // line 51
-        echo "                                    <li><a href=\"";
+        echo "                                     <!-- <li><a href=\"";
         echo twig_escape_filter($this->env, site_url(("login/login_log/" . get_sess_data("login", "id"))), "html", null, true);
-        echo "\">Login log</a></li>
+        echo "\">Login log</a></li> -->
                                     <li class=\"divider\"></li>
                                     <li><a href=\"";
         // line 53

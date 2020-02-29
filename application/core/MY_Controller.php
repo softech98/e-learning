@@ -90,9 +90,9 @@ class MY_Controller extends CI_Controller
         autoload_function_plugin();
 
         # since 1.8.2 update field last_activity login log, pastikan dibawah table_change
-        if (is_login()) {
-            $this->login_model->update_last_activity(get_sess_data('login', 'log_id'));
-        }
+        // if (is_login()) {
+        //     $this->login_model->update_last_activity(get_sess_data('login', 'log_id'));
+        // }
     }
 
     /**
@@ -116,27 +116,27 @@ class MY_Controller extends CI_Controller
         }
 
         # penambahan fitur login log
-        $this->login_model->alter_table();
+        // $this->login_model->alter_table();
 
         # since 1.8.2 tambah field last_activity
-        $ada_field = false;
-        $fields = $this->db->field_data('login_log');
-        foreach ($fields as $field) {
-            if ($field->name == 'last_activity') {
-                $ada_field = true;
-                break;
-            }
-        }
+        // $ada_field = false;
+        // $fields = $this->db->field_data('login_log');
+        // foreach ($fields as $field) {
+        //     if ($field->name == 'last_activity') {
+        //         $ada_field = true;
+        //         break;
+        //     }
+        // }
         # jika tidak ada
-        if (!$ada_field) {
-            $this->dbforge->add_column('login_log', array(
-                'last_activity' => array(
-                    'type' => 'INT',
-                    'unsigned' => TRUE,
-                    'null' => TRUE,
-                ),
-            ));
-        }
+        // if (!$ada_field) {
+        //     $this->dbforge->add_column('login_log', array(
+        //         'last_activity' => array(
+        //             'type' => 'INT',
+        //             'unsigned' => TRUE,
+        //             'null' => TRUE,
+        //         ),
+        //     ));
+        // }
 
         # 2.0 optimasi index table
         $this->config_model->update_index_default_table();

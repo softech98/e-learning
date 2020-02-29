@@ -35,7 +35,7 @@
                     {{ anchor('pengajar/edit_profile/' ~ status_id ~ '/' ~ pengajar.id, 'Edit Profil', {'class' : 'pengajar-iframe-4 btn btn-small btn-primary', 'title' : 'Edit Profil Pengajar'})|raw }}
                     {{ anchor('pengajar/edit_picture/' ~ status_id ~ '/' ~ pengajar.id, 'Edit Foto', {'class' : 'pengajar-iframe-5 btn btn-small btn-primary', 'title' : 'Edit Foto Pengajar'})|raw }}
                     {% if is_admin() %}
-                    {{ anchor('login/login_log/' ~ pengajar_login.id, 'Login log', {'class' : 'btn btn-small btn-default', 'title' : 'Login log'})|raw }}
+                   <!--  {{ anchor('login/login_log/' ~ pengajar_login.id, 'Login log', {'class' : 'btn btn-small btn-default', 'title' : 'Login log'})|raw }} -->
                     {% endif %}
                 </div>
                 {% endif %}

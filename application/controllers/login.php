@@ -42,7 +42,7 @@ class Login extends MY_Controller
                 }
 
                 # cari last login
-                $last_log = $this->login_model->retrieve_last_log($get_login['id']);
+                // $last_log = $this->login_model->retrieve_last_log($get_login['id']);
                 if (!empty($last_log)) {
                     # cek last_activitynya, jika kurang dari 2 menit
                     $time_minus = strtotime("-2 minutes", time());
@@ -69,7 +69,7 @@ class Login extends MY_Controller
                 }
 
                 # create log
-                $log_id = $this->login_model->create_log($get_login['id']);
+                 // $log_id = $this->login_model->create_log($get_login['id']);
                 $get_login['log_id'] = $log_id;
 
                 $data_session[$user_type] = array(
@@ -112,7 +112,7 @@ class Login extends MY_Controller
     {
         # update last activity
         $time_minus = strtotime("-2 minutes", time());
-        $this->login_model->update_last_activity(get_sess_data('login', 'log_id'), $time_minus);
+        // $this->login_model->update_last_activity(get_sess_data('login', 'log_id'), $time_minus);
 
         $this->session->set_userdata('filter_pengajar', null);
         $this->session->set_userdata('filter_materi', null);
