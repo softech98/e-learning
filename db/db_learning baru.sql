@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 28 Feb 2020 pada 20.45
+-- Waktu pembuatan: 13 Bulan Mei 2020 pada 13.44
 -- Versi server: 10.1.38-MariaDB
 -- Versi PHP: 7.3.3
 
@@ -65,10 +65,9 @@ CREATE TABLE `el_kelas` (
 
 INSERT INTO `el_kelas` (`id`, `nama`, `parent_id`, `urutan`, `aktif`) VALUES
 (6, 'KELAS XI TKJ', NULL, 1, 1),
-(7, 'KELAS XI - TKJ 1', 6, 2, 1),
 (8, 'KELAS XI - TKJ 2', 6, 3, 1),
 (9, 'KELAS XI - TKJ 3', 6, 4, 1),
-(10, 'KELAS XI - TKJ 4', 6, 5, 0);
+(16, 'KELAS XI - TKJ 1', 6, 2, 1);
 
 -- --------------------------------------------------------
 
@@ -88,7 +87,42 @@ CREATE TABLE `el_kelas_siswa` (
 --
 
 INSERT INTO `el_kelas_siswa` (`id`, `kelas_id`, `siswa_id`, `aktif`) VALUES
-(1, 7, 1, 1);
+(4, 7, 42, 0),
+(5, 7, 41, 0),
+(3, 9, 1, 1),
+(6, 7, 39, 0),
+(7, 7, 22, 0),
+(8, 7, 14, 0),
+(9, 7, 11, 0),
+(10, 7, 4, 0),
+(11, 7, 2, 0),
+(12, 9, 51, 1),
+(13, 9, 49, 1),
+(14, 9, 48, 1),
+(15, 9, 45, 1),
+(16, 9, 43, 1),
+(17, 9, 42, 1),
+(18, 9, 41, 1),
+(19, 9, 40, 1),
+(20, 9, 39, 1),
+(21, 9, 37, 1),
+(22, 9, 36, 1),
+(23, 9, 34, 1),
+(24, 9, 29, 1),
+(25, 9, 28, 1),
+(26, 9, 22, 1),
+(27, 9, 21, 1),
+(28, 9, 18, 1),
+(29, 9, 14, 1),
+(30, 9, 12, 1),
+(31, 9, 11, 1),
+(32, 9, 10, 1),
+(33, 9, 8, 1),
+(34, 9, 7, 1),
+(35, 9, 6, 1),
+(36, 9, 4, 1),
+(37, 9, 2, 1),
+(38, 8, 41, 0);
 
 -- --------------------------------------------------------
 
@@ -136,7 +170,8 @@ INSERT INTO `el_login` (`id`, `username`, `password`, `siswa_id`, `pengajar_id`,
 (1, 'guru@guru.com', '9310f83135f238b04af729fec041cca8', NULL, 1, 1, NULL),
 (2, 'siswa1@siswa.com', '013f0f67779f3b1686c604db150d12ea', 1, NULL, 0, 'ae93c84feb68dd8c85b59529bfb854ee'),
 (3, 'guru1@guru.com', '9310f83135f238b04af729fec041cca8', NULL, 2, 0, NULL),
-(4, 'guru2@guru.com', '9310f83135f238b04af729fec041cca8', NULL, 3, 0, NULL);
+(4, 'guru2@guru.com', '9310f83135f238b04af729fec041cca8', NULL, 3, 0, NULL),
+(5, 'sukartono@yahoo.com', 'e10adc3949ba59abbe56e057f20f883e', NULL, 4, 0, NULL);
 
 -- --------------------------------------------------------
 
@@ -165,7 +200,7 @@ INSERT INTO `el_mapel` (`id`, `nama`, `info`, `aktif`) VALUES
 (7, 'Fisika', NULL, 1),
 (8, 'Kimia', NULL, 1),
 (9, 'Ekonomi', NULL, 1),
-(10, 'Teknologi Informasi', '', 1);
+(10, 'Teknologi Informasi', '', 0);
 
 -- --------------------------------------------------------
 
@@ -190,15 +225,12 @@ INSERT INTO `el_mapel_kelas` (`id`, `kelas_id`, `mapel_id`, `aktif`) VALUES
 (3, 7, 3, 1),
 (4, 7, 5, 1),
 (5, 7, 6, 1),
-(6, 8, 1, 1),
 (7, 8, 2, 1),
 (8, 8, 3, 1),
-(9, 8, 4, 0),
 (10, 8, 5, 1),
 (11, 8, 6, 1),
 (12, 8, 7, 1),
-(13, 8, 8, 0),
-(14, 8, 9, 0),
+(13, 8, 8, 1),
 (15, 8, 10, 1);
 
 -- --------------------------------------------------------
@@ -225,9 +257,7 @@ CREATE TABLE `el_materi` (
 --
 
 INSERT INTO `el_materi` (`id`, `mapel_id`, `pengajar_id`, `siswa_id`, `judul`, `konten`, `file`, `tgl_posting`, `publish`, `views`) VALUES
-(1, 3, 1, NULL, 'Konfigurasi Server', '<p><iframe allowfullscreen=\"\" frameborder=\"0\" height=\"360\" src=\"//www.youtube.com/embed/T6ceI5QpaSI\" width=\"640\"></iframe></p>\r\n', NULL, '2019-11-24 23:45:59', 1, 13),
-(2, 2, 2, NULL, 'Dengarkan', '<div class=\"ckeditor-html5-audio\" style=\"text-align: center;\">\r\n<audio __idm_id__=\"726475777\" controls=\"controls\" src=\"http://localhost:8180/new_elearning/userfiles/uploads/3/Alan_Walker%2C_K-391_%26_Emelie_Hollow_-_Lily_(Lyrics).mp3?time=1574708644589\">&nbsp;</audio>\r\n</div>\r\n\r\n<p>&nbsp;</p>\r\n', NULL, '2019-11-26 02:09:11', 0, 6),
-(3, 9, 2, NULL, 'Database', NULL, 'database_1576703041.docx', '2019-12-19 04:04:01', 1, 4),
+(1, 3, 1, NULL, 'Konfigurasi Server', '<p><iframe allowfullscreen=\"\" frameborder=\"0\" height=\"360\" src=\"//www.youtube.com/embed/T6ceI5QpaSI\" width=\"640\"></iframe></p>\r\n', NULL, '2019-11-24 23:45:59', 1, 14),
 (4, 10, 2, NULL, 'MEMBACA', NULL, 'membaca_1577288361.pdf', '2019-12-25 22:39:21', 1, 4);
 
 -- --------------------------------------------------------
@@ -251,33 +281,6 @@ INSERT INTO `el_materi_kelas` (`id`, `materi_id`, `kelas_id`) VALUES
 (2, 2, 6),
 (3, 3, 6),
 (4, 4, 6);
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `el_messages`
---
-
-CREATE TABLE `el_messages` (
-  `id` int(11) NOT NULL,
-  `type_id` tinyint(1) NOT NULL COMMENT '1=inbox,2=outbox',
-  `content` text NOT NULL,
-  `owner_id` int(11) NOT NULL,
-  `sender_receiver_id` int(11) NOT NULL,
-  `date` datetime NOT NULL,
-  `opened` tinyint(1) NOT NULL DEFAULT '0' COMMENT '0=belum,1=sudah'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
---
--- Dumping data untuk tabel `el_messages`
---
-
-INSERT INTO `el_messages` (`id`, `type_id`, `content`, `owner_id`, `sender_receiver_id`, `date`, `opened`) VALUES
-(1, 2, '<p>Assalamu&#39;alaikum pak, Maaf mengganggu.&nbsp;</p>\r\n', 2, 1, '2019-11-24 16:20:19', 1),
-(2, 1, '<p>Assalamu&#39;alaikum pak, Maaf mengganggu.&nbsp;</p>\r\n', 1, 2, '2019-11-24 16:20:19', 1),
-(3, 2, '<p>iya ada apa ya?</p>\r\n\r\n<p>&nbsp;</p>\r\n', 1, 2, '2019-11-24 16:21:13', 1),
-(4, 1, '<p>iya ada apa ya?</p>\r\n\r\n<p>&nbsp;</p>\r\n', 2, 1, '2019-11-24 16:21:13', 1),
-(6, 1, '<p>kak?</p>\r\n', 1, 3, '2020-01-15 02:11:10', 1);
 
 -- --------------------------------------------------------
 
@@ -325,7 +328,8 @@ CREATE TABLE `el_pengajar` (
 INSERT INTO `el_pengajar` (`id`, `nip`, `nama`, `jenis_kelamin`, `tempat_lahir`, `tgl_lahir`, `alamat`, `foto`, `status_id`) VALUES
 (1, '', 'Administrator', 'Laki-laki', 'Jambi', '1990-01-01', 'Jambi', NULL, 1),
 (2, '157151513156', 'Guru Pertama', 'Laki-laki', '', NULL, '', NULL, 1),
-(3, '1571021939121', 'Guru Kedua', 'Laki-laki', 'Jambi', '1973-08-20', 'Jambi', NULL, 2);
+(3, '1571021939121', 'Guru Kedua', 'Laki-laki', 'Jambi', '1973-08-20', 'Jambi', NULL, 2),
+(4, '10213124231312', 'Sukartono', 'Laki-laki', 'Padang', '1987-01-19', 'Jambi', NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -344,14 +348,14 @@ CREATE TABLE `el_pengaturan` (
 --
 
 INSERT INTO `el_pengaturan` (`id`, `nama`, `value`) VALUES
-('email-server', 'Email server', 'no-reply@domain.com'),
+('email-server', 'Email server', 'smeansa.sch.id'),
 ('email-template-approve-pengajar', 'Approve pengajar (email pengajar)', '{\"subject\":\"Pengaktifan Akun\",\"body\":\"<p>Hai {$nama},<\\/p>\\n<p>Anda telah diterima sebagai pengajar pada {$nama_sekolah}, berikut informasi data diri anda:<\\/p>\\n<p>{$tabel_profil}<\\/p>\\n<p>Anda dapat login ke sistem E-Learning menggunakan username dan password yang telah anda buat saat pendaftaran, login pada url berikut : {$url_login}<\\/p>\"}'),
 ('email-template-approve-siswa', 'Approve siswa (email siswa)', '{\"subject\":\"Pengaktifan Akun\",\"body\":\"<p>Hai {$nama},<\\/p>\\n<p>Anda telah diterima sebagai siswa pada {$nama_sekolah}, berikut informasi data diri anda:<\\/p>\\n<p>{$tabel_profil}<\\/p>\\n<p>Anda dapat login ke sistem E-Learning menggunakan username dan password yang telah anda buat saat pendaftaran, login pada url berikut : {$url_login}<\\/p>\"}'),
 ('email-template-link-reset', 'Link Reset Password', '{\"subject\":\"Reset Password\",\"body\":\"<p>Hai,<\\/p>\\n<p>Anda mengirimkan permintaan untuk reset password anda, klik link berikut untuk memulai reset password : {$link_reset}<\\/p>\"}'),
 ('email-template-register-pengajar', 'Register pengajar (email pengajar)', '{\"subject\":\"Registrasi Berhasil\",\"body\":\"<p>Hai {$nama},<\\/p>\\n<p>Terimakasih telah melakukan pendaftaran sebagai pengajar di E-Learning {$nama_sekolah}. Akun anda akan segera diaktifkan oleh admin.<\\/p>\"}'),
 ('email-template-register-siswa', 'Register siswa (email siswa)', '{\"subject\":\"Registrasi Berhasil\",\"body\":\"<p>Hai {$nama},<\\/p>\\n<p>Terimakasih telah melakukan pendaftaran sebagai siswa di E-Learning {$nama_sekolah}. Akun anda akan segera diaktifkan oleh admin.<\\/p>\"}'),
 ('info-registrasi', 'Info Registrasi', '<p>Silakan mendaftar sebagai Siswa atau Guru (jika anda sebagai Guru) dengan memilih sesuai tab berikut :</p>\r\n'),
-('peraturan-elearning', 'Peraturan E-learning', ''),
+('peraturan-elearning', 'peraturan-elearning', ''),
 ('registrasi-pengajar', 'Registrasi Pengajar', '1'),
 ('registrasi-siswa', 'Registrasi Siswa', '1'),
 ('versi', 'Versi', '2.0'),
@@ -359,40 +363,12 @@ INSERT INTO `el_pengaturan` (`id`, `nama`, `value`) VALUES
 ('nama-sekolah', 'nama-sekolah', 'SMK Negeri 1 Jambi'),
 ('alamat', 'alamat', 'Jl. Jend. A. Thalib, Simpang IV Sipin, Kec. Telanaipura Kota Jambi'),
 ('telp', 'telp', ''),
-('install-success', 'install-success', '1'),
 ('status-registrasi-siswa', 'status-registrasi-siswa', '0'),
 ('status-registrasi-pengajar', 'status-registrasi-pengajar', '0'),
 ('logo-sekolah', 'logo-sekolah', 'logo-sekolah.png'),
-('smtp-host', 'smtp-host', ''),
-('smtp-username', 'smtp-username', ''),
-('smtp-pass', 'smtp-pass', ''),
-('smtp-port', 'smtp-port', ''),
 ('edit-username-siswa', 'edit-username-siswa', '1'),
 ('edit-foto-siswa', 'edit-foto-siswa', '1'),
-('info-slide-1', 'info-slide-1', ''),
-('info-slide-2', 'info-slide-2', ''),
-('info-slide-3', 'info-slide-3', ''),
-('info-slide-4', 'info-slide-4', ''),
-('img-slide-1', 'img-slide-1', ''),
-('img-slide-2', 'img-slide-2', 'img-slide-2.jpg'),
-('img-slide-3', 'img-slide-3', '');
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `el_pengumuman`
---
-
-CREATE TABLE `el_pengumuman` (
-  `id` int(11) NOT NULL,
-  `judul` varchar(255) NOT NULL,
-  `konten` text NOT NULL,
-  `tgl_tampil` date NOT NULL,
-  `tgl_tutup` date NOT NULL,
-  `tampil_siswa` tinyint(1) NOT NULL DEFAULT '1',
-  `tampil_pengajar` tinyint(1) NOT NULL DEFAULT '1',
-  `pengajar_id` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+('img-slide-2', 'img-slide-2', 'img-slide-2.jpg');
 
 -- --------------------------------------------------------
 
@@ -445,7 +421,57 @@ CREATE TABLE `el_siswa` (
 --
 
 INSERT INTO `el_siswa` (`id`, `nis`, `nama`, `jenis_kelamin`, `tempat_lahir`, `tgl_lahir`, `agama`, `alamat`, `tahun_masuk`, `foto`, `status_id`) VALUES
-(1, '15710', 'Siswa Pertama', 'Laki-laki', 'Jambi', NULL, 'ISLAM', '', 2016, NULL, 1);
+(1, '15710', 'Siswa Pertama', 'Laki-laki', 'Jambi', NULL, 'ISLAM', '', 2016, NULL, 1),
+(2, '9420888464', 'Janet Kuswandari', 'Perempuan', 'Bima', '1969-03-14', 'Kristen', 'Ki. Pelajar Pejuang 45 No. 247, Pangkal Pinang 70668, Gorontalo', 2020, NULL, 1),
+(3, '9913071292', 'Ganda Habibi S.H.', 'Perempuan', 'Bogor', '1943-09-05', 'Islam', 'Gg. Bakau Griya Utama No. 34, Bontang 70237, JaTeng', 2020, NULL, 0),
+(4, '9160556794', 'Darmana Dasa Mangunsong M.Kom.', 'Perempuan', 'Banjar', '1953-06-15', 'Islam', 'Ds. Nakula No. 601, Makassar 73428, SulUt', 2020, NULL, 1),
+(5, '9202555176', 'Ana Anggraini', 'Perempuan', 'Semarang', '1957-09-20', 'Kristen', 'Dk. Suryo No. 657, Kotamobagu 34032, NTB', 2020, NULL, 0),
+(6, '9046610667', 'Cici Andriani S.I.Kom', 'Laki-laki', 'Tanjung Pinang', '1936-03-20', 'Kristen', 'Ds. Bagis Utama No. 878, Sibolga 23178, Gorontalo', 2019, NULL, 1),
+(7, '9435065248', 'Warji Slamet Uwais S.E.I', 'Laki-laki', 'Bekasi', '1988-05-31', 'Buddha', 'Psr. Laswi No. 416, Sukabumi 14994, Lampung', 2019, NULL, 1),
+(8, '9192308925', 'Febi Mardhiyah S.Psi', 'Perempuan', 'Tangerang', '1988-05-31', 'Buddha', 'Gg. Bagas Pati No. 133, Kediri 44151, SumBar', 2019, NULL, 1),
+(9, '9476870382', 'Aurora Anggraini', 'Laki-laki', 'Lhokseumawe', '1931-06-29', 'Hindu', 'Dk. Pahlawan No. 382, Tanjung Pinang 39317, BaBel', 2020, NULL, 0),
+(10, '9967170844', 'Kariman Tirtayasa Permadi M.Farm', 'Laki-laki', 'Kendari', '1988-05-31', 'Buddha', 'Jr. Sunaryo No. 668, Mojokerto 38952, KalBar', 2019, NULL, 1),
+(11, '9847491548', 'Jarwadi Siregar', 'Perempuan', 'Tomohon', '1988-05-31', 'Kristen', 'Psr. Kiaracondong No. 63, Tanjungbalai 69347, Gorontalo', 2020, NULL, 1),
+(12, '9190094885', 'Suci Wahyuni', 'Laki-laki', 'Tangerang Selatan', '1982-04-29', 'Hindu', 'Jln. Babah No. 459, Administrasi Jakarta Pusat 20592, KalTeng', 2019, NULL, 1),
+(13, '9992292883', 'Cakrawala Bakda Habibi', 'Perempuan', 'Manado', '1983-07-14', 'Buddha', 'Dk. Thamrin No. 766, Mataram 90552, SumSel', 2019, NULL, 0),
+(14, '9890234417', 'Mutia Purnawati', 'Perempuan', 'Administrasi Jakarta Timur', '1988-05-31', 'Islam', 'Ki. Ahmad Dahlan No. 632, Palu 88724, Aceh', 2020, NULL, 1),
+(15, '9043431072', 'Bakda Siregar', 'Laki-laki', 'Bandar Lampung', '1988-05-31', 'Buddha', 'Jr. Bappenas No. 465, Bau-Bau 11887, Banten', 2020, NULL, 0),
+(16, '9509921247', 'Endra Simbolon', 'Laki-laki', 'Kendari', '1947-11-17', 'Kristen', 'Ki. Bass No. 626, Palembang 62709, MalUt', 2019, NULL, 0),
+(17, '9441108989', 'Lega Karma Wacana S.E.I', 'Laki-laki', 'Banjarbaru', '1940-04-27', 'Kristen', 'Kpg. Ketandan No. 793, Manado 28860, Jambi', 2019, NULL, 0),
+(18, '9239003626', 'Wirda Rini Pudjiastuti', 'Laki-laki', 'Bandung', '1988-05-31', 'Islam', 'Jln. Cikutra Timur No. 790, Subulussalam 14255, Riau', 2019, NULL, 1),
+(19, '9360442935', 'Samsul Megantara', 'Perempuan', 'Kotamobagu', '1950-03-08', 'Islam', 'Kpg. Haji No. 220, Manado 87698, SulBar', 2020, NULL, 0),
+(20, '9070203995', 'Karimah Rini Wahyuni M.M.', 'Perempuan', 'Sawahlunto', '1933-07-02', 'Buddha', 'Ds. Arifin No. 213, Singkawang 42329, KalUt', 2020, NULL, 0),
+(21, '9478874377', 'Ellis Hartati', 'Perempuan', 'Tidore Kepulauan', '1988-05-31', 'Buddha', 'Gg. Basoka No. 585, Jayapura 52907, Lampung', 2019, NULL, 1),
+(22, '9190363307', 'Puput Wijayanti S.Pd', 'Laki-laki', 'Gorontalo', '1988-05-31', 'Kristen', 'Jr. Raden No. 385, Sungai Penuh 55009, KalTeng', 2020, NULL, 1),
+(23, '9824206024', 'Indah Padmasari M.TI.', 'Perempuan', 'Metro', '1954-06-30', 'Hindu', 'Ds. Yos No. 341, Banjar 33332, KalUt', 2019, NULL, 0),
+(24, '9889154517', 'Ira Agustina', 'Perempuan', 'Banjarbaru', '1949-02-03', 'Hindu', 'Ki. Yosodipuro No. 59, Tual 79419, Jambi', 2020, NULL, 0),
+(25, '9040967496', 'Gina Rahayu S.IP', 'Perempuan', 'Balikpapan', '1948-05-05', 'Kristen', 'Gg. Wahid No. 566, Kotamobagu 13177, Lampung', 2020, NULL, 0),
+(26, '9707862307', 'Nadine Purnawati S.T.', 'Laki-laki', 'Malang', '1986-08-02', 'Hindu', 'Jr. Astana Anyar No. 286, Sawahlunto 29932, KalBar', 2020, NULL, 0),
+(27, '9772817096', 'Prabawa Garang Maheswara S.Farm', 'Laki-laki', 'Jambi', '1970-09-25', 'Kristen', 'Ki. Perintis Kemerdekaan No. 675, Tomohon 74982, BaBel', 2020, NULL, 0),
+(28, '9215202318', 'Abyasa Tamba S.IP', 'Perempuan', 'Sibolga', '1929-09-25', 'Kristen', 'Jln. Asia Afrika No. 80, Surakarta 24676, DKI', 2019, NULL, 1),
+(29, '9833627718', 'Nasim Hutasoit', 'Laki-laki', 'Surabaya', '1988-05-31', 'Islam', 'Psr. Pasteur No. 366, Palangka Raya 75989, Gorontalo', 2019, NULL, 1),
+(30, '9323471744', 'Mursinin Sitompul', 'Laki-laki', 'Yogyakarta', '1938-05-01', 'Islam', 'Ki. Ketandan No. 135, Depok 70100, KalTeng', 2020, NULL, 0),
+(31, '9018130491', 'Nasim Nasab Putra', 'Laki-laki', 'Ambon', '1988-05-31', 'Buddha', 'Psr. Kartini No. 986, Kupang 51049, DIY', 2019, NULL, 0),
+(32, '9452722567', 'Sarah Utami', 'Perempuan', 'Palangka Raya', '1941-02-11', 'Buddha', 'Kpg. Rajiman No. 126, Langsa 47443, KalUt', 2019, NULL, 0),
+(33, '9517043459', 'Bambang Samosir M.Farm', 'Laki-laki', 'Banjarbaru', '1988-05-31', 'Islam', 'Jr. Casablanca No. 363, Malang 72201, KepR', 2019, NULL, 0),
+(34, '9270649478', 'Balapati Halim S.Kom', 'Perempuan', 'Tual', '1972-02-28', 'Islam', 'Ds. Qrisdoren No. 285, Padangsidempuan 40769, Aceh', 2019, NULL, 1),
+(35, '9370725167', 'Julia Handayani', 'Perempuan', 'Bengkulu', '1978-01-12', 'Hindu', 'Kpg. Ters. Jakarta No. 497, Palangka Raya 39573, JaTim', 2019, NULL, 0),
+(36, '9468110482', 'Kurnia Sitompul', 'Laki-laki', 'Cilegon', '1933-04-10', 'Hindu', 'Psr. Teuku Umar No. 27, Mojokerto 23404, KalTim', 2019, NULL, 1),
+(37, '9048938850', 'Paiman Kusumo', 'Laki-laki', 'Bogor', '1935-08-12', 'Kristen', 'Kpg. Kali No. 236, Prabumulih 53513, Banten', 2019, NULL, 1),
+(38, '9075789813', 'Oni Alika Puspita S.Gz', 'Perempuan', 'Tanjungbalai', '1984-06-18', 'Hindu', 'Dk. Elang No. 726, Pontianak 58097, Bali', 2019, NULL, 0),
+(39, '9338230063', 'Rama Wacana', 'Laki-laki', 'Prabumulih', '1988-05-31', 'Hindu', 'Ds. Ir. H. Juanda No. 823, Dumai 68554, SulUt', 2020, NULL, 1),
+(40, '9956560880', 'Jumadi Prasasta S.T.', 'Laki-laki', 'Kupang', '1988-05-31', 'Hindu', 'Ds. Baya Kali Bungur No. 520, Bitung 70555, Maluku', 2019, NULL, 1),
+(41, '9471620204', 'Puspa Purwanti S.Farm', 'Laki-laki', 'Palopo', '1951-07-28', 'Kristen', 'Psr. Bakin No. 257, Padangsidempuan 27478, KalSel', 2020, NULL, 1),
+(42, '9718097234', 'Cinthia Sudiati', 'Laki-laki', 'Batam', '1952-05-30', 'Kristen', 'Dk. Cikapayang No. 203, Probolinggo 95169, Bali', 2020, NULL, 1),
+(43, '9717330605', 'Tantri Purnawati', 'Laki-laki', 'Probolinggo', '1930-02-26', 'Kristen', 'Psr. Mahakam No. 502, Pariaman 43128, BaBel', 2019, NULL, 1),
+(44, '9223459220', 'Kiandra Hariyah', 'Perempuan', 'Tangerang', '1988-05-31', 'Kristen', 'Dk. Sudirman No. 340, Payakumbuh 32409, MalUt', 2020, NULL, 0),
+(45, '9599203263', 'Maman Wibowo', 'Laki-laki', 'Batam', '1950-02-14', 'Kristen', 'Dk. Banal No. 577, Kendari 80031, NTT', 2019, NULL, 1),
+(46, '9625585214', 'Ulva Siti Halimah', 'Laki-laki', 'Semarang', '1937-03-29', 'Kristen', 'Ki. Karel S. Tubun No. 648, Cimahi 91956, SulUt', 2020, NULL, 0),
+(47, '9736190399', 'Asmianto Siregar', 'Laki-laki', 'Surakarta', '1988-05-31', 'Kristen', 'Ds. Monginsidi No. 750, Cilegon 84845, SumBar', 2019, NULL, 0),
+(48, '9012493658', 'Kamaria Kani Purwanti S.Psi', 'Perempuan', 'Cirebon', '1988-05-31', 'Kristen', 'Dk. Teuku Umar No. 160, Tegal 95227, MalUt', 2019, NULL, 1),
+(49, '9478712523', 'Artanto Gunarto', 'Laki-laki', 'Singkawang', '1965-09-13', 'Hindu', 'Jr. Honggowongso No. 438, Mojokerto 21422, Maluku', 2019, NULL, 1),
+(50, '9866244664', 'Victoria Jessica Mayasari S.IP', 'Laki-laki', 'Pasuruan', '1988-05-31', 'Buddha', 'Jr. Kiaracondong No. 360, Tebing Tinggi 11444, Banten', 2020, NULL, 0),
+(51, '9395179536', 'Kawaca Sihotang', 'Laki-laki', 'Binjai', '1977-11-02', 'Buddha', 'Psr. Kyai Mojo No. 538, Surabaya 26610, Papua', 2019, NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -556,7 +582,19 @@ ALTER TABLE `el_kelas_siswa`
 ALTER TABLE `el_komentar`
   ADD PRIMARY KEY (`id`),
   ADD KEY `login_id` (`login_id`,`materi_id`),
-  ADD KEY `login_id_2` (`login_id`,`materi_id`);
+  ADD KEY `login_id_2` (`login_id`,`materi_id`),
+  ADD KEY `login_id_3` (`login_id`,`materi_id`),
+  ADD KEY `login_id_4` (`login_id`,`materi_id`),
+  ADD KEY `login_id_5` (`login_id`,`materi_id`),
+  ADD KEY `login_id_6` (`login_id`,`materi_id`),
+  ADD KEY `login_id_7` (`login_id`,`materi_id`),
+  ADD KEY `login_id_8` (`login_id`,`materi_id`),
+  ADD KEY `login_id_9` (`login_id`,`materi_id`),
+  ADD KEY `login_id_10` (`login_id`,`materi_id`),
+  ADD KEY `login_id_11` (`login_id`,`materi_id`),
+  ADD KEY `login_id_12` (`login_id`,`materi_id`),
+  ADD KEY `login_id_13` (`login_id`,`materi_id`),
+  ADD KEY `login_id_14` (`login_id`,`materi_id`);
 
 --
 -- Indeks untuk tabel `el_login`
@@ -597,14 +635,6 @@ ALTER TABLE `el_materi_kelas`
   ADD KEY `materi_id_2` (`materi_id`,`kelas_id`);
 
 --
--- Indeks untuk tabel `el_messages`
---
-ALTER TABLE `el_messages`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `type_id` (`type_id`,`owner_id`,`sender_receiver_id`),
-  ADD KEY `type_id_2` (`type_id`,`owner_id`,`sender_receiver_id`);
-
---
 -- Indeks untuk tabel `el_nilai_tugas`
 --
 ALTER TABLE `el_nilai_tugas`
@@ -625,13 +655,6 @@ ALTER TABLE `el_pengajar`
 --
 ALTER TABLE `el_pengaturan`
   ADD PRIMARY KEY (`id`);
-
---
--- Indeks untuk tabel `el_pengumuman`
---
-ALTER TABLE `el_pengumuman`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `pengajar_id` (`pengajar_id`);
 
 --
 -- Indeks untuk tabel `el_pilihan`
@@ -681,13 +704,13 @@ ALTER TABLE `el_tugas_pertanyaan`
 -- AUTO_INCREMENT untuk tabel `el_kelas`
 --
 ALTER TABLE `el_kelas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT untuk tabel `el_kelas_siswa`
 --
 ALTER TABLE `el_kelas_siswa`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- AUTO_INCREMENT untuk tabel `el_komentar`
@@ -699,7 +722,7 @@ ALTER TABLE `el_komentar`
 -- AUTO_INCREMENT untuk tabel `el_login`
 --
 ALTER TABLE `el_login`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT untuk tabel `el_mapel`
@@ -726,12 +749,6 @@ ALTER TABLE `el_materi_kelas`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT untuk tabel `el_messages`
---
-ALTER TABLE `el_messages`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
 -- AUTO_INCREMENT untuk tabel `el_nilai_tugas`
 --
 ALTER TABLE `el_nilai_tugas`
@@ -741,13 +758,7 @@ ALTER TABLE `el_nilai_tugas`
 -- AUTO_INCREMENT untuk tabel `el_pengajar`
 --
 ALTER TABLE `el_pengajar`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT untuk tabel `el_pengumuman`
---
-ALTER TABLE `el_pengumuman`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT untuk tabel `el_pilihan`
@@ -759,7 +770,7 @@ ALTER TABLE `el_pilihan`
 -- AUTO_INCREMENT untuk tabel `el_siswa`
 --
 ALTER TABLE `el_siswa`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
 
 --
 -- AUTO_INCREMENT untuk tabel `el_tugas`
