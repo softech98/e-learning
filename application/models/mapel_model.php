@@ -33,7 +33,8 @@ class Mapel_model extends CI_Model
     public function delete_kelas($id)
     {
         $id = (int)$id;
-        $this->db->update('mapel_kelas', array('aktif' => 0), array('id' => $id));
+        // $this->db->update('mapel_kelas', array('aktif' => 0), array('id' => $id));
+        $this->db->where('id', $id)->delete('mapel_kelas');
         return true;
     }
 

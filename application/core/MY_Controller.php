@@ -45,9 +45,9 @@ class MY_Controller extends CI_Controller
         $this->form_validation->set_error_delimiters('<span class="text-error"><i class="icon-info-sign"></i> ', '</span>');
 
         # cek apakah sudah berhasil install
-        if (check_success_install() == false) {
-            echo $error_install;die;
-        }
+        // if (check_success_install() == false) {
+        //     echo $error_install;die;
+        // }
 
         # jika bukan ajax
         if (!is_ajax()) {

@@ -210,7 +210,7 @@ class __TwigTemplate_8f9d7c6785edc4eca16ab1544d48104c49727a1d4b532f8759711570632
         echo "</textarea>
                 </div>
             </div>
-            <div class=\"control-group\">
+          <!--   <div class=\"control-group\">
                 <label class=\"control-label\">Peraturan E-learning</label>
                 <div class=\"controls\">
                     <textarea name=\"peraturan-elearning\" class=\"texteditor\" style=\"width:100%; height:300px;\">";
@@ -218,7 +218,7 @@ class __TwigTemplate_8f9d7c6785edc4eca16ab1544d48104c49727a1d4b532f8759711570632
         echo set_value("peraturan-elearning", get_pengaturan("peraturan-elearning", "value"));
         echo "</textarea>
                 </div>
-            </div>
+            </div> -->
          <!--    <div class=\"control-group\">
                 <label class=\"control-label\">Email server</label>
                 <div class=\"controls\">
@@ -331,7 +331,7 @@ class __TwigTemplate_8f9d7c6785edc4eca16ab1544d48104c49727a1d4b532f8759711570632
                     <table class=\"table table-condensed\">
                         <tr>
                             <td style=\"border-top: none;\">
-                                <div class=\"row-fluid\">
+                                <!-- <div class=\"row-fluid\">
                                     <div class=\"span2\" style=\"margin-bottom: 10px;\">
                                         Gambar 1
                                     </div>
@@ -353,8 +353,8 @@ class __TwigTemplate_8f9d7c6785edc4eca16ab1544d48104c49727a1d4b532f8759711570632
         // line 186
         echo "                                        <input type=\"file\" name=\"img-slide-1\">
                                     </div>
-                                </div>
-                                <div class=\"row-fluid\" style=\"margin-bottom: 10px;margin-top: 10px;\">
+                                </div> -->
+                                <!-- <div class=\"row-fluid\" style=\"margin-bottom: 10px;margin-top: 10px;\">
                                     <div class=\"span2\">
                                         Info gambar 1
                                     </div>
@@ -366,7 +366,7 @@ class __TwigTemplate_8f9d7c6785edc4eca16ab1544d48104c49727a1d4b532f8759711570632
                                     </div>
                                 </div>
                             </td>
-                        </tr>
+                        </tr> -->
                         <tr>
                             <td style=\"border-top:1px dashed #fbfbfb;\">
                                 <div class=\"row-fluid\">
@@ -392,7 +392,7 @@ class __TwigTemplate_8f9d7c6785edc4eca16ab1544d48104c49727a1d4b532f8759711570632
         echo "                                        <input type=\"file\" name=\"img-slide-2\">
                                     </div>
                                 </div>
-                                <div class=\"row-fluid\" style=\"margin-bottom: 10px;margin-top: 10px;\">
+                                <!-- <div class=\"row-fluid\" style=\"margin-bottom: 10px;margin-top: 10px;\">
                                     <div class=\"span2\">
                                         Info gambar 2
                                     </div>
@@ -402,10 +402,10 @@ class __TwigTemplate_8f9d7c6785edc4eca16ab1544d48104c49727a1d4b532f8759711570632
         echo set_value("info-slide-2", get_pengaturan("info-slide-2", "value"));
         echo "</textarea>
                                     </div>
-                                </div>
+                                </div> -->
                             </td>
                         </tr>
-                        <tr>
+                       <!--  <tr>
                             <td style=\"border-top:1px dashed #fbfbfb;\">
                                 <div class=\"row-fluid\">
                                     <div class=\"span2\" style=\"margin-bottom: 10px;\">
@@ -442,8 +442,8 @@ class __TwigTemplate_8f9d7c6785edc4eca16ab1544d48104c49727a1d4b532f8759711570632
                                     </div>
                                 </div>
                             </td>
-                        </tr>
-                        <tr>
+                        </tr> -->
+                        <!-- <tr>
                             <td style=\"border-top:1px dashed #fbfbfb;\">
                                 <div class=\"row-fluid\">
                                     <div class=\"span2\" style=\"margin-bottom: 10px;\">
@@ -480,7 +480,7 @@ class __TwigTemplate_8f9d7c6785edc4eca16ab1544d48104c49727a1d4b532f8759711570632
                                     </div>
                                 </div>
                             </td>
-                        </tr>
+                        </tr> -->
                     </table>
                 </div>
             </div>

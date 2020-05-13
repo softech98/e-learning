@@ -1,9 +1,31 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
+include_once(APPPATH . "third_party/faker/autoload.php");
 
+use Faker\Provider\Base;
 
 class Welcome extends MY_Controller
 {
+    PUBLIC function adduser()
+    {
+        for($i = 0; $i < 50; $i++) {
+            $faker = Faker\Factory::create('id_ID');
+            
+            $this->siswa_model->create(
+                $nis = $faker->numerify('9#########'),
+                $nama = $faker->name,
+                $jenis_kelamin = $faker->randomElement(['Laki-laki', 'Perempuan']),
+                $tempat_lahir = $faker->city,
+                $tgl_lahir = $faker->dateTimeThisCentury->format('Y-m-d'),
+                $agama = $faker->randomElement(['Islam', 'Kristen Protestan', 'Kristen Katolik','Buddha','Hindu']),
+                $alamat = $faker->address,
+                $tahun_masuk =  rand(2019, 2020),
+                $foto = null,
+                $status_id = rand(0,1)
+            );
+        }
+    }
+
     function index()
     {
         must_login();

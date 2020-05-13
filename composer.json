@@ -1,0 +1,12 @@
+{
+    "name": "ilham/new_elearning",
+    "authors": [
+        {
+            "name": "ilham",
+            "email": "ilham@gmail.com"
+        }
+    ],
+    "require": {
+        "fzaninotto/faker": "^1.9"
+    }
+}

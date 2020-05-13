@@ -37,6 +37,7 @@ class Kelas extends MY_Controller
                 </span></span>
                 <span class="pull-right">
                     <a href="'.site_url('kelas/edit/'.$m['id']).'" title="Edit"><i class="icon icon-edit"></i>Edit</a>
+                    <a href="'.site_url('kelas/delete/'.$m['id']).'" title="Delete" onclick="return confirm(\'yakin akan menghapus data ini?\')"><i class="icon icon-trash"></i>Delete</a>
                 </span>';
                 if ($m['aktif'] == 1) {
                     $str_kelas .= '<b>'.$m['nama'].'</b>';
@@ -393,5 +394,12 @@ class Kelas extends MY_Controller
         }
 
         $this->twig->display($content_file, $data);
+    }
+
+    public function delete($id)
+    {
+        $this->kelas_model->delete($id);
+
+        return redirect('kelas'); 
     }
 }
