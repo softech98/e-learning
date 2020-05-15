@@ -41,7 +41,7 @@ class __TwigTemplate_ddbe86978e31e34bdf8da20ae6e19aaf6c259042e87caf47a7fd947e081
         // line 8
         echo "<div class=\"panel panel-default\">
     <div class=\"panel-heading\">
-        <strong>Profil Publik</strong>
+        <strong>Profile Siswa</strong>
         <div class=\"btn-group pull-right\" style=\"margin-top:-4px;\">
             ";
         // line 12

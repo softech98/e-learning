@@ -487,7 +487,8 @@ class Siswa extends MY_Controller
         }
 
         # cek pengaturan
-        if (is_siswa() AND get_pengaturan('edit-foto-siswa', 'value') == '0') {
+        // if (is_siswa() AND get_pengaturan('edit-foto-siswa', 'value') == '0') {
+        if (is_siswa() AND '1'== '0') {
             show_error('Maaf fitur dinonaktifkan oleh administrator');
         }
 
@@ -670,8 +671,10 @@ class Siswa extends MY_Controller
         }
 
         # cek pengaturan
-        if (is_siswa() AND get_pengaturan('edit-username-siswa', 'value') == '0') {
+        // if (is_siswa() AND get_pengaturan('edit-username-siswa', 'value') == '0') 
+        if (is_siswa() AND '0'=='0') {
             exit('Maaf fitur dinonaktifkan oleh administrator');
+
         }
 
         $status_id      = (int)$segment_3;

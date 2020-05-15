@@ -72,19 +72,19 @@ class MY_Controller extends CI_Controller
         }
 
         # cek versi
-        $versi_install = '2.0';
-        $versi = get_pengaturan('versi', 'value');
+        // $versi_install = '2.0';
+        // $versi = get_pengaturan('versi', 'value');
 
-        $this->current_version = $versi;
+        // $this->current_version = $versi;
 
-        if ($versi < $versi_install) {
-            $this->config_model->update('versi', 'Versi', $versi_install);
+        // if ($versi < $versi_install) {
+        //     $this->config_model->update('versi', 'Versi', $versi_install);
 
-            # panggil perubahan tabel
-            $this->table_change();
+        //     # panggil perubahan tabel
+        //     $this->table_change();
 
-            $this->current_version = $versi_install;
-        }
+        //     $this->current_version = $versi_install;
+        // }
 
         # autoload function plugin
         autoload_function_plugin();

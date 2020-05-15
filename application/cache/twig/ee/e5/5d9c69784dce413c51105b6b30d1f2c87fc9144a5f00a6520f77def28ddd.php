@@ -69,7 +69,7 @@ class __TwigTemplate_eee55d9c69784dce413c51105b6b30d1f2c87fc9144a5f00a6520f77def
         // line 19
         if (($this->getAttribute((isset($context["pengajar_login"]) ? $context["pengajar_login"] : null), "id") != get_sess_data("login", "id"))) {
             // line 20
-            echo "        <div class=\"row-fluid\">
+            echo "        <!-- <div class=\"row-fluid\">
             <div class=\"span4\">
                 <div class=\"btn-group\">
                     <a class=\"btn btn-default btn-sm\" href=\"";
@@ -78,7 +78,7 @@ class __TwigTemplate_eee55d9c69784dce413c51105b6b30d1f2c87fc9144a5f00a6520f77def
             echo "\"><i class=\"icon-comments\"></i> Kirim Pesan</a>
                 </div>
             </div>
-        </div>
+        </div> -->
         <br>
         ";
         }

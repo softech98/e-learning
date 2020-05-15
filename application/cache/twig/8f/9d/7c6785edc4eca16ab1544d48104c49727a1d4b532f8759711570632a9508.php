@@ -201,7 +201,7 @@ class __TwigTemplate_8f9d7c6785edc4eca16ab1544d48104c49727a1d4b532f8759711570632
                     </label>
                 </div>
             </div>
-            <div class=\"control-group\">
+            <!-- <div class=\"control-group\">
                 <label class=\"control-label\">Info Registrasi</label>
                 <div class=\"controls\">
                     <textarea name=\"info-registrasi\" class=\"texteditor\" style=\"width:100%; height:300px;\">";
@@ -209,7 +209,7 @@ class __TwigTemplate_8f9d7c6785edc4eca16ab1544d48104c49727a1d4b532f8759711570632
         echo set_value("info-registrasi", get_pengaturan("info-registrasi", "value"));
         echo "</textarea>
                 </div>
-            </div>
+            </div> -->
           <!--   <div class=\"control-group\">
                 <label class=\"control-label\">Peraturan E-learning</label>
                 <div class=\"controls\">
@@ -291,7 +291,7 @@ class __TwigTemplate_8f9d7c6785edc4eca16ab1544d48104c49727a1d4b532f8759711570632
         echo "
                 </div>
             </div> -->
-            <div class=\"control-group\">
+           <!--  <div class=\"control-group\">
                 <label class=\"control-label\">Edit username siswa</label>
                 <div class=\"controls\">
                     <label class=\"radio inline\">
@@ -307,8 +307,8 @@ class __TwigTemplate_8f9d7c6785edc4eca16ab1544d48104c49727a1d4b532f8759711570632
         echo "> Siswa tidak dapat mengganti username
                     </label>
                 </div>
-            </div>
-            <div class=\"control-group\">
+            </div> -->
+            <!-- <div class=\"control-group\">
                 <label class=\"control-label\">Edit foto siswa</label>
                 <div class=\"controls\">
                     <label class=\"radio inline\">
@@ -324,7 +324,7 @@ class __TwigTemplate_8f9d7c6785edc4eca16ab1544d48104c49727a1d4b532f8759711570632
         echo "> Siswa tidak dapat mengganti foto
                     </label>
                 </div>
-            </div>
+            </div> -->
             <div class=\"control-group\">
                 <label class=\"control-label\">Slider halaman login</label>
                 <div class=\"controls\" style=\"background-color: #FBFBFB; padding: 10px;border-radius: 5px;\">
@@ -371,7 +371,7 @@ class __TwigTemplate_8f9d7c6785edc4eca16ab1544d48104c49727a1d4b532f8759711570632
                             <td style=\"border-top:1px dashed #fbfbfb;\">
                                 <div class=\"row-fluid\">
                                     <div class=\"span2\" style=\"margin-bottom: 10px;\">
-                                        Gambar 2
+                                        Gambar 1
                                     </div>
                                     <div class=\"span10\">
                                         ";

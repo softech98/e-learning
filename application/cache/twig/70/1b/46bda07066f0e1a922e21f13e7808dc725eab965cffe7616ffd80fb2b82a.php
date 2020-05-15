@@ -69,7 +69,7 @@ class __TwigTemplate_701b46bda07066f0e1a922e21f13e7808dc725eab965cffe7616ffd80fb
         // line 19
         if (($this->getAttribute((isset($context["siswa_login"]) ? $context["siswa_login"] : null), "id") != get_sess_data("login", "id"))) {
             // line 20
-            echo "        <div class=\"row-fluid\">
+            echo "       <!--  <div class=\"row-fluid\">
             <div class=\"span4\">
                 <div class=\"btn-group\">
                     <a class=\"btn btn-default btn-sm\" href=\"";
@@ -78,7 +78,7 @@ class __TwigTemplate_701b46bda07066f0e1a922e21f13e7808dc725eab965cffe7616ffd80fb
             echo "\"><i class=\"icon-comments\"></i> Kirim Pesan</a>
                 </div>
             </div>
-        </div>
+        </div> -->
         <br>
         ";
         }

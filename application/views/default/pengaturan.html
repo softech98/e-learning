@@ -96,12 +96,12 @@ Pengaturan - {{ parent() }}
                     </label>
                 </div>
             </div>
-            <div class="control-group">
+            <!-- <div class="control-group">
                 <label class="control-label">Info Registrasi</label>
                 <div class="controls">
                     <textarea name="info-registrasi" class="texteditor" style="width:100%; height:300px;">{{ set_value('info-registrasi', get_pengaturan('info-registrasi', 'value'))|raw }}</textarea>
                 </div>
-            </div>
+            </div> -->
           <!--   <div class="control-group">
                 <label class="control-label">Peraturan E-learning</label>
                 <div class="controls">
@@ -145,7 +145,7 @@ Pengaturan - {{ parent() }}
                     <br>{{ form_error('smtp-port')|raw }}
                 </div>
             </div> -->
-            <div class="control-group">
+           <!--  <div class="control-group">
                 <label class="control-label">Edit username siswa</label>
                 <div class="controls">
                     <label class="radio inline">
@@ -155,8 +155,8 @@ Pengaturan - {{ parent() }}
                         <input type="radio" name="edit-username-siswa" value="0" {{ set_radio('edit-username-siswa', '0', ((get_pengaturan('edit-username-siswa', 'value') == '0') ? true)) }}> Siswa tidak dapat mengganti username
                     </label>
                 </div>
-            </div>
-            <div class="control-group">
+            </div> -->
+            <!-- <div class="control-group">
                 <label class="control-label">Edit foto siswa</label>
                 <div class="controls">
                     <label class="radio inline">
@@ -166,7 +166,7 @@ Pengaturan - {{ parent() }}
                         <input type="radio" name="edit-foto-siswa" value="0" {{ set_radio('edit-foto-siswa', '0', ((get_pengaturan('edit-foto-siswa', 'value') == '0') ? true)) }}> Siswa tidak dapat mengganti foto
                     </label>
                 </div>
-            </div>
+            </div> -->
             <div class="control-group">
                 <label class="control-label">Slider halaman login</label>
                 <div class="controls" style="background-color: #FBFBFB; padding: 10px;border-radius: 5px;">
@@ -200,7 +200,7 @@ Pengaturan - {{ parent() }}
                             <td style="border-top:1px dashed #fbfbfb;">
                                 <div class="row-fluid">
                                     <div class="span2" style="margin-bottom: 10px;">
-                                        Gambar 2
+                                        Gambar 1
                                     </div>
                                     <div class="span10">
                                         {% if get_pengaturan('img-slide-2', 'value') %}
