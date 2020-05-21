@@ -236,7 +236,7 @@ class __TwigTemplate_fdef5001ac1e5ed20f29a43628631df199c43225e4362d7f07f530ef498
         echo "
                 </div>
             </div>
-            <div class=\"control-group\">
+           <!--  <div class=\"control-group\">
                 <label class=\"control-label\">Opsi</label>
                 <div class=\"controls\">
                     <label class=\"checkbox text-warning\"><input type=\"checkbox\" name=\"is_admin\" value=\"1\" ";
@@ -248,7 +248,7 @@ class __TwigTemplate_fdef5001ac1e5ed20f29a43628631df199c43225e4362d7f07f530ef498
         echo form_error("is_admin");
         echo "
                 </div>
-            </div>
+            </div> -->
             <div class=\"control-group\">
                 <div class=\"controls\">
                     <button type=\"submit\" class=\"btn btn-primary\">Simpan</button>

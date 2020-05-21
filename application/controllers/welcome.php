@@ -8,10 +8,10 @@ class Welcome extends MY_Controller
 {
     PUBLIC function adduser()
     {
-        for($i = 0; $i < 50; $i++) {
+        for($i = 0; $i < 20; $i++) {
             $faker = Faker\Factory::create('id_ID');
             
-            $this->siswa_model->create(
+                $siswa_id =  $this->siswa_model->create(
                 $nis = $faker->numerify('9#########'),
                 $nama = $faker->name,
                 $jenis_kelamin = $faker->randomElement(['Laki-laki', 'Perempuan']),
@@ -22,6 +22,11 @@ class Welcome extends MY_Controller
                 $tahun_masuk =  rand(2019, 2020),
                 $foto = null,
                 $status_id = rand(0,1)
+            );
+                 $this->kelas_model->create_siswa(
+                $kelas_id = $faker->randomElement([7,8,9]),
+                $siswa_id = $siswa_,
+                 1
             );
         }
     }

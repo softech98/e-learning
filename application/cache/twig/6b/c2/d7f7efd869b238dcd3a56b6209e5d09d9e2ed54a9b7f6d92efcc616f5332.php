@@ -221,7 +221,7 @@ class __TwigTemplate_6bc2d7f7efd869b238dcd3a56b6209e5d09d9e2ed54a9b7f6d92efcc616
             echo "
             </td>
         <tr>
-        <tr>
+        <!-- <tr>
             <th>Opsi</th>
             <td>
                 <label class=\"checkbox text-warning\"><input type=\"checkbox\" name=\"is_admin\" value=\"1\" ";
@@ -233,7 +233,7 @@ class __TwigTemplate_6bc2d7f7efd869b238dcd3a56b6209e5d09d9e2ed54a9b7f6d92efcc616
             echo form_error("is_admin");
             echo "
             </td>
-        <tr>
+        <tr> -->
         ";
         }
         // line 93

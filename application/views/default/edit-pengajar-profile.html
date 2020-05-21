@@ -82,13 +82,13 @@
                 <br>{{ form_error('status_id')|raw }}
             </td>
         <tr>
-        <tr>
+        <!-- <tr>
             <th>Opsi</th>
             <td>
                 <label class="checkbox text-warning"><input type="checkbox" name="is_admin" value="1" {{ set_checkbox('is_admin', '1', (pengajar.is_admin == 1) ? TRUE : FALSE) }}> Jadikan pengajar admin website</label>
                 <br>{{ form_error('is_admin')|raw }}
             </td>
-        <tr>
+        <tr> -->
         {% endif %}
 
         {% if is_demo_app() == false or pengajar.is_admin == false %}
