@@ -118,7 +118,7 @@ class Materi extends MY_Controller
             $retrieve_kelas = $this->kelas_model->retrieve($kelas_aktif['kelas_id']);
 
             # ambil parentnya
-            $filter['kelas_id'] = array($retrieve_kelas['parent_id']);
+             $filter['kelas_id'] = array($kelas_aktif['kelas_id']);
         }
 
         # ambil semua data materi
@@ -164,7 +164,7 @@ class Materi extends MY_Controller
 
         $data['type']    = $type;
         $data['mapel']   = $this->mapel_model->retrieve_all_mapel();
-        $data['kelas']   = $this->kelas_model->retrieve_all(null, array('aktif' => 1));
+        $data['kelas']   = $this->kelas_model->retrieve_all_child();
         $data['comp_js'] = get_texteditor();
 
         $success = false;
@@ -343,7 +343,7 @@ class Materi extends MY_Controller
         $data['type']         = $type;
         $data['materi']       = $materi;
         $data['mapel']        = $this->mapel_model->retrieve_all_mapel();
-        $data['kelas']        = $this->kelas_model->retrieve_all(null, array('aktif' => 1));
+        $data['kelas']        = $this->kelas_model->retrieve_all_child();
         $data['materi_kelas'] = $materi_kelas_id;
         $data['comp_js']      = get_texteditor();
         if ($type == 'file') {
@@ -694,7 +694,7 @@ class Materi extends MY_Controller
 
                     $kelas_valid = false;
                     foreach ($arr_materi_kelas_id as $mk_id) {
-                        if ($mk_id == $retrieve_kelas['parent_id']) {
+                        if ($mk_id == $retrieve_kelas['id']) {
                             $kelas_valid = true;
                             break;
                         }

@@ -29,7 +29,7 @@ class Welcome extends MY_Controller
                  1
             );
         }
-    }
+        }
 
     function index()
     {
@@ -37,6 +37,7 @@ class Welcome extends MY_Controller
 
         $data = array();
         if (is_siswa()) {
+        
             $retrieve_all_materi = $this->materi_model->retrieve_all(
                 10,
                 1,
